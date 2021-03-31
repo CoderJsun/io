@@ -90,7 +90,19 @@
 <p><code>  struct NSObject_IMPL&#123;</code>  </p>
 <p>​     <code> Claa isa</code>  </p>
 <p><code>&#125;</code></p>
-<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
+<blockquote>
+<h3 id="内存初窥"><a href="#内存初窥" class="headerlink" title="内存初窥"></a>内存初窥</h3><blockquote>
+<ul>
+<li>一个Object-C对象会被分配不少于 16 bytes 的空间</li>
+<li>对象的指针地址为第一个成员的地址</li>
+</ul>
+</blockquote>
+</blockquote>
+<p>可能你对最小分配16字节大小的结论有疑问，可以点击  <a target="_blank" rel="noopener" href="https://opensource.apple.com/tarballs/objc4/">objc4/</a> 下载源码查看内部实现 。在 objc-class-old 文件的 _class_createInstanceFromZone(Class cls, size_t extraBytes, void *zone)  方法中实现了下面规定</p>
+<p><code> // CF requires all objects be at least 16 bytes.</code></p>
+<p> <code>if (size &lt; 16) size = 16;</code></p>
+<p><code>&#125;  </code></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
       
     </div>
 
