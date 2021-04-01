@@ -136,7 +136,7 @@
 <h5 id="2-2-init-原理"><a href="#2-2-init-原理" class="headerlink" title="2.2 init 原理"></a>2.2 init 原理</h5><p>分析完了 <code>alloc</code> 的流程，我们接着分析 <code>init</code> 的流程。相比于 <code>alloc</code> 来说， <code>init</code> 内部实现十分简单，先来到的是 <code>_objc_rootInit</code> ，然后就直接返回 <code>obj</code> 了。其实这里是一种抽象工厂设计模式的体现，对于 <code>NSObject</code> 自带的 <code>init</code> 方法来说，其实啥也没干，但是如果你继承于 <code>NSObject</code> 的话，然后就可以去重写 `initWithxyz 之类的初始化方法来做一些初始化操作。</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Replaced by CF (throws an NSException)</span></span><br><span class="line">+ (id)<span class="keyword">init</span> &#123;</span><br><span class="line">  <span class="comment">// 工厂设计模式</span></span><br><span class="line">    <span class="keyword">return</span> (id)self;</span><br><span class="line">&#125;</span><br><span class="line">- (id)<span class="keyword">init</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> _objc_rootInit(self);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="三、附上草图"><a href="#三、附上草图" class="headerlink" title="三、附上草图"></a>三、附上草图</h2><p>画功不太好😄<a target="_blank" rel="noopener" href="https://github.com/coderx-waper/io/blob/main/images/tuyao.png">涂鸦</a> </p>
+<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p>开发过程中探究源码会让我们对一项事务有不一样的认识，建议同仁多阅读源码。                                      </p>
 
       
     </div>
