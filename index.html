@@ -88,7 +88,7 @@
 </blockquote>
 <p>那么一个Object-C对象在底层中如何布局的？通过分析不难发现其底层实现如下图</p>
 <p><code>  struct NSObject_IMPL&#123;</code>  </p>
-<p>​     <code> Claa isa</code>  </p>
+<p>​     <code> Class isa</code>  </p>
 <p><code>&#125;</code></p>
 <blockquote>
 <h3 id="内存初窥"><a href="#内存初窥" class="headerlink" title="内存初窥"></a>内存初窥</h3><blockquote>
@@ -103,11 +103,8 @@
 <p><code> // CF requires all objects be at least 16 bytes.</code></p>
 <p> <code>if (size &lt; 16) size = 16;</code></p>
 <p><code>&#125;  </code></p>
-<h2 id="二、alloc-和-init-原理"><a href="#二、alloc-和-init-原理" class="headerlink" title="二、alloc 和 init 原理"></a>二、alloc 和 init 原理</h2><p>作为一名iOS开发工程师，每天都要和这两个元素打交道，那么你对它了解多少呢？它们各自承担着什么职责？让我们开始一步步探索</p>
-<p>首先实例化一个 Person 对象</p>
-<p>Person *student = [[Person alloc] init];</p>
-<p>在调用<code>alloc</code>方法的时候，首先系统会调用一个<code>[NSObject alloc]</code>的方法：</p>
-<p>id objc_alloc(Class cls) {<br>    return callAlloc(cls, true/<em>checkNil</em>/, false/<em>allocWithZone</em>/);<br>}</p>
+<h2 id="二、Object-C对象创建原理"><a href="#二、Object-C对象创建原理" class="headerlink" title="二、Object-C对象创建原理"></a>二、Object-C对象创建原理</h2><p>官方给出了两种创建对象的方式，方式一：通过 <code> [[object alloc]init]</code> ,方式二：通过 <code> [object new]</code> 下面我们用两种方式来新建一个 <code>Person</code> 对象。</p>
+<p>Person * person = [[Person alloc] init];</p>
 
       
     </div>
