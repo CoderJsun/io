@@ -102,11 +102,27 @@
 </blockquote>
 </blockquote>
 <p>可能你对最小分配16字节大小的结论有疑问，可以点击  <a target="_blank" rel="noopener" href="https://opensource.apple.com/tarballs/objc4/">objc4/</a> 下载源码查看内部实现 。在 objc-class-old 文件的 _class_createInstanceFromZone(Class cls, size_t extraBytes, void *zone)  方法中实现了下面规定</p>
-<p><code> // CF requires all objects be at least 16 bytes.</code></p>
-<p> <code>if (size &lt; 16) size = 16;</code></p>
-<p><code>&#125;  </code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CF requires all objects be at least 16 bytes. </span></span><br><span class="line"><span class="keyword">if</span> (size &lt; <span class="number">16</span>) size = <span class="number">16</span>;</span><br></pre></td></tr></table></figure>
+
 <h2 id="二、Object-C对象创建原理"><a href="#二、Object-C对象创建原理" class="headerlink" title="二、Object-C对象创建原理"></a>二、Object-C对象创建原理</h2><p>官方给出了两种创建对象的方式，方式一：通过 <code> [[object alloc]init]</code> ,方式二：通过 <code> [object new]</code> 下面我们用两种方式来新建一个 <code>Person</code> 对象。</p>
-<p>Person * person = [[Person alloc] init];</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person * person = [[Person alloc] init];</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       
     </div>
