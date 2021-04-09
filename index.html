@@ -57,6 +57,62 @@
 
   
     
+    <h3 class="article-title"><a href="/io/2021/04/09/UIMaker/"><span>UIMaker</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/io/2021/04/09/UIMaker/" rel="bookmark">
+        <time class="entry-date published" datetime="2021-04-09T09:38:59.000Z">
+          2021-04-09
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h2 id="UIMaker"><a href="#UIMaker" class="headerlink" title="UIMaker"></a>UIMaker</h2><p>名字没想好，就暂且叫它 <code> UIMaker</code> </p>
+<h3 id="写UIMaker-动机"><a href="#写UIMaker-动机" class="headerlink" title="写UIMaker 动机"></a>写UIMaker 动机</h3><p>自<code> Masonry</code> 的横空出世，其链式编程的姿势屡试不爽，相比于iOS的书写姿势更见其🐂， <code>Masonry</code> 中能实现这种链式编程方式那么iOS控件创建也一定能实现这种方式，在看完其内部实现后，在闲余时间决定自己将 UIKit 重写一遍达到其一样的效果，希望在开发过程中对开发效率和代码的可读性有一定的帮助。</p>
+<h3 id="UIMaker-引入"><a href="#UIMaker-引入" class="headerlink" title="UIMaker 引入"></a>UIMaker 引入</h3><blockquote>
+<h5 id="支持通过-pod-UIMaker"><a href="#支持通过-pod-UIMaker" class="headerlink" title="支持通过 pod UIMaker"></a>支持通过<code> pod UIMaker</code></h5></blockquote>
+<blockquote>
+<h5 id="可直接下载引入"><a href="#可直接下载引入" class="headerlink" title="可直接下载引入"></a>可直接下载引入</h5></blockquote>
+<h3 id="用法示例"><a href="#用法示例" class="headerlink" title="用法示例"></a>用法示例</h3><blockquote>
+<h5 id="目前-支持创建-UILabel-、-UIButton-、-UIImageView-后续还会继续拓展"><a href="#目前-支持创建-UILabel-、-UIButton-、-UIImageView-后续还会继续拓展" class="headerlink" title="目前 支持创建 UILabel 、 UIButton 、 UIImageView  后续还会继续拓展"></a>目前 支持创建 <code>UILabel</code> 、<code> UIButton</code> 、<code> UIImageView</code>  后续还会继续拓展</h5><blockquote>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[Maker(UIMakerTypeLabel) mas_make:^(UIMaker * _Nonnull make) &#123;</span><br><span class="line">  make.text(@<span class="string">&quot;哈哈哈哈wishing边还是会 is丢分汇合&quot;</span>)</span><br><span class="line"> .frame(CGRectMake(<span class="number">100</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">80</span>))</span><br><span class="line"> .backGroudColor([UIColor redColor])</span><br><span class="line"> .fontSize(<span class="number">16</span>)</span><br><span class="line"> .textColor([UIColor whiteColor])</span><br><span class="line"> .lineBreakMode(NSLineBreakByTruncatingMiddle).radian(CGSizeMake(<span class="number">10</span>, <span class="number">10</span>));</span><br><span class="line"> &#125;];</span><br></pre></td></tr></table></figure>
+</blockquote>
+</blockquote>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
     <h3 class="article-title"><a href="/io/2021/03/31/OC对象的本质/"><span>OC对象的本质</span></a></h3>
     
   
