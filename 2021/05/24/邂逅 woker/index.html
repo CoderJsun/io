@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>邂逅CLI开发-woker开发过程 | coderz - 记录每一刻 | coderz</title>
+
+  
+  <meta name="author" content="coderz">
+  
+
+  
+  <meta name="description" content="coderz- 记录个人日常">
+  
+
+  
+  
+  <meta name="keywords" content="NodeJs">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="邂逅CLI开发-woker开发过程"/>
+
+  <meta property="og:site_name" content="coderz - 记录每一刻"/>
+
+  
+  <meta property="og:image" content="/io/favicon.ico"/>
+  
+
+  <link href="/io/favicon.ico" rel="icon">
+  <link rel="alternate" href="/io/atom.xml" title="coderz - 记录每一刻" type="application/atom+xml">
+  <link rel="stylesheet" href="/io/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/io/">coderz - 记录每一刻</a>
+    </h1>
+    <p class="site-description">coderz</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>邂逅CLI开发-woker开发过程</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/io/2021/05/24/邂逅 woker/" rel="bookmark">
+        <time class="entry-date published" datetime="2021-05-24T07:55:53.000Z">
+          2021-05-24
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h2 id="邂逅CLI开发-woker开发过程"><a href="#邂逅CLI开发-woker开发过程" class="headerlink" title="邂逅CLI开发-woker开发过程"></a>邂逅CLI开发-woker开发过程</h2><p>在前端开发过程中，我们会使用各种各样的架手架 vue-cli、create-react-app等工具。</p>
+<p>这些工具是怎么开发出来的？当我们输入一个命令其内部帮我们处理了哪些事情？</p>
+<p>最近写了一个叫 woker 的小工具，记录下其开发过程。文档会分成两部分</p>
+<blockquote>
+<p>CLI 脚手架开发过程； </p>
+</blockquote>
+<blockquote>
+<p>woker 使用介绍；</p>
+<blockquote>
+<p>Vue 项目模板：<a target="_blank" rel="noopener" href="https://github.com/coderx-waper/z-vue-template">https://github.com/coderx-waper/z-vue-template</a></p>
+<p>脚手架地址：<a target="_blank" rel="noopener" href="https://github.com/coderx-waper/woker">https://github.com/coderx-waper/woker</a> </p>
+</blockquote>
+</blockquote>
+<p>如对你有帮助，欢迎一键三联~ 点个 star 还是要 求一下的😬 </p>
+<hr>
+<h3 id="开发过程"><a href="#开发过程" class="headerlink" title="开发过程"></a>开发过程</h3><h4 id="一、项目开始"><a href="#一、项目开始" class="headerlink" title="一、项目开始"></a>一、项目开始</h4><ul>
+<li><p>创建空文件夹 作为我们项目的存放位置 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如：cd woker</span><br></pre></td></tr></table></figure></li>
+<li><p>创建 package.json文件</p>
+<p>在终端执行<code>  npm init -y</code> ，即可生成  package.json 文件</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;woker&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;vue-cli&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;bin&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;woker&quot;</span>: <span class="string">&quot;index.js&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;keywords&quot;</span>: [<span class="string">&quot;vue-cli&quot;</span>,<span class="string">&quot;coderz&quot;</span>,<span class="string">&quot;vue&quot;</span>,<span class="string">&quot;woker&quot;</span>],</span><br><span class="line">  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;coderz&quot;</span>, </span><br><span class="line">  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span>,</span><br><span class="line">  <span class="string">&quot;homepage&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span>,</span><br><span class="line">  <span class="string">&quot;repository&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;type&quot;</span>: <span class="string">&quot;git&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;commander&quot;</span>: <span class="string">&quot;^7.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;download-git-repo&quot;</span>: <span class="string">&quot;^3.0.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;ejs&quot;</span>: <span class="string">&quot;^3.1.6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;inquirer&quot;</span>: <span class="string">&quot;^8.0.0&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>配置文件夹</p>
+<p>最终 woker 项目中文件目录结构</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">├── lib</span><br><span class="line">| ├── config <span class="comment">// 配置文件</span></span><br><span class="line">│ │   └── repo_config.js</span><br><span class="line">| ├── core <span class="comment">// 核心文件</span></span><br><span class="line">│ │   ├── react <span class="comment">// 待增加... </span></span><br><span class="line">│ │   ├── vue</span><br><span class="line">│ │   ├── └── action.js</span><br><span class="line">│ │   ├── └── create.js </span><br><span class="line">│ │   ├── └── help.js</span><br><span class="line">| ├── templates <span class="comment">// ejs 模板文件</span></span><br><span class="line">│ │   └── vue-component.ejs</span><br><span class="line">│ │   └── vue-router.ejs</span><br><span class="line">│ │   └── vue-store.ejs</span><br><span class="line">│ │   └── vue-types.ejs</span><br><span class="line">| ├── untils <span class="comment">// </span></span><br><span class="line">│ │   └── terminal.js</span><br><span class="line">│ │   └── utils.js</span><br><span class="line">├── index.js</span><br><span class="line">├── package-lock.json</span><br><span class="line">├── package.json</span><br><span class="line">├── README.md</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="二、创建命令"><a href="#二、创建命令" class="headerlink" title="二、创建命令"></a>二、创建命令</h4><p>必须注意一点 ，这段代码必须放在 index.js 文件的最上面</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env node</span></span><br></pre></td></tr></table></figure>
+
+<p>修改 package.json 文件</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;bin&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;woker&quot;</span>: <span class="string">&quot;index.js&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>执行 <code> npm link</code>   woker 才会生效</p>
+<p>创建命令需要借助<code> commander</code> 库来实现，用法可自行参考<a target="_blank" rel="noopener" href="https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md">https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md</a> </p>
+<h4 id="三、创建项目指令"><a href="#三、创建项目指令" class="headerlink" title="三、创建项目指令"></a>三、创建项目指令</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">program.command(<span class="string">&#x27;create &lt;project&gt; [others...]&#x27;</span>)</span><br><span class="line">        .description(<span class="string">&#x27;clone repo into a folder&#x27;</span>)</span><br><span class="line">        .action(createVueProjectAction)</span><br></pre></td></tr></table></figure>
+
+<p><code>createVueProjectAction</code> 是封装在 action.js 文件中的一个动作，在action中的创建过程：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// create a vue template action</span></span><br><span class="line"><span class="keyword">const</span> createVueProjectAction = <span class="keyword">async</span> (project, others) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(project, others)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1 clone project</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;coderz helps you clone a vue template, this requires a budget...&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> download(vuerepo, project, &#123;</span><br><span class="line">        clone: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2 npm install</span></span><br><span class="line">    <span class="keyword">const</span> commandTerminal = process.platform === <span class="string">&#x27;win32&#x27;</span> ? <span class="string">&#x27;npm.cmd&#x27;</span> : <span class="string">&#x27;npm&#x27;</span></span><br><span class="line">    <span class="keyword">await</span> commandSpawn(commandTerminal, [<span class="string">&#x27;install&#x27;</span>], &#123;</span><br><span class="line">        cwd: <span class="string">`./<span class="subst">$&#123;project&#125;</span>`</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 3 run serve</span></span><br><span class="line">    commandSpawn(commandTerminal, [<span class="string">&#x27;run&#x27;</span>, <span class="string">&#x27;serve&#x27;</span>], &#123;</span><br><span class="line">        cwd: <span class="string">`./<span class="subst">$&#123;project&#125;</span>`</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4 z-vue-template install it --open </span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里涉及几个几个问题：</p>
+<ul>
+<li>download ：可以进行 clone 的一个第三方库<code> download-git-repo</code>  可自行在 npm 中查看其用法</li>
+<li>commandSpawn：执行终端命令的函数 可在 terminal.js 文件中找到其实现方法</li>
+<li>vuerepo：vue-template 模板地址，封装在 lib/config/repo-config.js 中，后续考虑可自定义模板地址，目前使用自己写的  <code> z-vue-template</code></li>
+</ul>
+<h4 id="四、添加组件指令"><a href="#四、添加组件指令" class="headerlink" title="四、添加组件指令"></a>四、添加组件指令</h4><p>添加指令</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">program.command(<span class="string">&#x27;addcpn &lt;name&gt;&#x27;</span>)</span><br><span class="line">        .description(<span class="string">&#x27;add vue component, eg: addcpn NavBar [-d src/components]&#x27;</span>)</span><br><span class="line">        .action(<span class="function">(<span class="params">name</span>) =&gt;</span> &#123;</span><br><span class="line">            addComponentAction(name, program.dest || <span class="string">&#x27;src/components&#x27;</span>)</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>addComponentAction 逻辑</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// create component action</span></span><br><span class="line"><span class="keyword">const</span> addComponentAction = <span class="keyword">async</span> (name, dest) =&gt; &#123;</span><br><span class="line">    <span class="comment">// needs ejs template -&gt;  .vue </span></span><br><span class="line">    <span class="keyword">const</span> result = <span class="keyword">await</span> compile(<span class="string">&#x27;vue-component.ejs&#x27;</span>, &#123;</span><br><span class="line">        name,</span><br><span class="line">        lowerName: name.toLowerCase()</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// write to source folder</span></span><br><span class="line">    <span class="keyword">const</span> targetPath = path.resolve(dest || <span class="string">&#x27;src/components&#x27;</span>, <span class="string">`<span class="subst">$&#123;name&#125;</span>.vue`</span>)</span><br><span class="line">    writeFile(targetPath, result)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里面存在一个问题即创建当文件夹不存的时，创建会出错，故而在调用 writeFile 中进行了文件夹的递归调用根据targetPath创建对应文件夹，其中的实现逻辑：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mkdirSync = <span class="function">(<span class="params">dirname</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (fs.existsSync(dirname)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 不存在,判断上一级文件夹是否存在？</span></span><br><span class="line">        <span class="keyword">if</span> (mkdirSync(path.dirname(dirname))) &#123;</span><br><span class="line">            <span class="comment">// 存在父文件，就直接新建该文件</span></span><br><span class="line">            fs.mkdirSync(dirname)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>添加组件需要去了解<code> ejs</code>用法，项目中已经根据需要提前写好了<code>vue-component.ejs</code>模板</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;&lt;%= data.lowerName %&gt;&quot;</span>&gt;</span><br><span class="line">    &lt;h2&gt;&#123;&#123; message &#125;&#125;&lt;/h2&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    name: <span class="string">&quot;&lt;%= data.name %&gt;&quot;</span>,</span><br><span class="line">    components: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    mixins: [],</span><br><span class="line">    props: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    data: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        message: <span class="string">&quot;Hello &lt;%= data.name %&gt;&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    created: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">  .&lt;%= data.lowerName %&gt; &#123;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>模板ejs 编译核心：需要使用到 <code>ejs</code> 库</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**编译文件 */</span></span><br><span class="line"><span class="keyword">const</span> compile = <span class="function">(<span class="params">template, data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 获取 路径</span></span><br><span class="line">    <span class="keyword">const</span> temp = <span class="string">`../templates/<span class="subst">$&#123;template&#125;</span>`</span></span><br><span class="line">    <span class="keyword">const</span> temPath = path.resolve(__dirname, temp)</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        ejs.renderFile(temPath, &#123;</span><br><span class="line">            data</span><br><span class="line">        &#125;, &#123;&#125;, <span class="function">(<span class="params">err, result</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;</span><br><span class="line">            resolve(result)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="五-、添加其他指令"><a href="#五-、添加其他指令" class="headerlink" title="五 、添加其他指令"></a>五 、添加其他指令</h4><p>添加 page指令和 store 指令同上，逻辑可以查看 woker 中的实现。这里不再累述。</p>
+<h4 id="六、发布到npm"><a href="#六、发布到npm" class="headerlink" title="六、发布到npm"></a>六、发布到npm</h4><p>在发布之前，所有指令必须测试无问题</p>
+<p>修改package.json：添加 homepage、repository</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;homepage&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span>, <span class="comment">//此处填写你的 homepage</span></span><br><span class="line"><span class="string">&quot;repository&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;type&quot;</span>: <span class="string">&quot;git&quot;</span>,</span><br><span class="line">  <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span> <span class="comment">//此处填写你的 repository</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>在命令行中登录：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm login <span class="comment">//根据提示输入信息即可</span></span><br></pre></td></tr></table></figure>
+
+<p>发布到npm registry中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="woker使用介绍"><a href="#woker使用介绍" class="headerlink" title="woker使用介绍"></a>woker使用介绍</h2><ul>
+<li><p>woker 是什么？</p>
+<p>Front-end scaffolding, currently supports vue</p>
+</li>
+<li><p>后续打算？</p>
+<p> 支持 支持 react template</p>
+</li>
+</ul>
+<p>如何安装？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g woker</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>目前<code>woker</code>仅支持vue，cli已经帮你配置了</p>
+<ul>
+<li>常用的目录结构</li>
+<li>axios </li>
+<li>vue-router</li>
+<li>vuex</li>
+<li>vue.config.js<br>创建项目</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">woker create &lt;project&gt;[^project]: 你的项目名称 例如： woker create demo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>自动拉取z-vue-template项目模板，自动打开 <code>http://localhost:8080/</code>、启动项目</p>
+<h3 id="创建组件"><a href="#创建组件" class="headerlink" title="创建组件"></a>创建组件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">woker addcpn &lt;component&gt;[^component]: 你的组件名称 例如： woker addcpn HelloWold</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h3><p>创建页面过程中会自动配置路由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">woker addpage &lt;profile&gt;[^profile]: 你的页面名称 例如： woker addpage profile</span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/io/tags/NodeJs/">NodeJs</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2021 coderz
+    
+  </p>
+</footer>
+    
+    
+  </div>
+</div>
+</body>
+</html>
