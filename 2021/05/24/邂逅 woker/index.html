@@ -111,7 +111,7 @@
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;bin&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;woker&quot;</span>: <span class="string">&quot;index.js&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
 <p>执行 <code> npm link</code>   woker 才会生效</p>
-<p>创建命令需要借助<code> commander</code> 库来实现，用法可自行参考<a target="_blank" rel="noopener" href="https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md">https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md</a> </p>
+<p>创建命令需要借助<code> commander</code> 库来实现，用法可自行参考官网<a target="_blank" rel="noopener" href="https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md"><code> commander</code></a></p>
 <h4 id="三、创建项目指令"><a href="#三、创建项目指令" class="headerlink" title="三、创建项目指令"></a>三、创建项目指令</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">program.command(<span class="string">&#x27;create &lt;project&gt; [others...]&#x27;</span>)</span><br><span class="line">        .description(<span class="string">&#x27;clone repo into a folder&#x27;</span>)</span><br><span class="line">        .action(createVueProjectAction)</span><br></pre></td></tr></table></figure>
 
 <p><code>createVueProjectAction</code> 是封装在 action.js 文件中的一个动作，在action中的创建过程：</p>
