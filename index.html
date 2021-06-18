@@ -57,14 +57,14 @@
 
   
     
-    <h3 class="article-title"><a href="/io/2021/06/18/Vue.js 官网 结论的一处的错误/"><span></span></a></h3>
+    <h3 class="article-title"><a href="/io/2021/06/18/Vue.js 官网 结论的一处的错误/"><span>执行 setup 时，组件实例真的如官方所说未创建？</span></a></h3>
     
   
 
   <div class="article-top-meta">
     <span class="posted-on">
       <a href="/io/2021/06/18/Vue.js 官网 结论的一处的错误/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-06-18T08:30:20.069Z">
+        <time class="entry-date published" datetime="2021-06-18T09:29:53.000Z">
           2021-06-18
         </time>
       </a>
@@ -77,8 +77,7 @@
   <div class="article-content">
     <div class="entry">
       
-        <p>title: 执行 <code>setup</code> 时，组件实例真的如官方所说未创建？<br>date: 2021-06-18 17:27:53<br>tags: Vue</p>
-<h2 id="Vue-js-官网-结论的一处的错误"><a href="#Vue-js-官网-结论的一处的错误" class="headerlink" title="Vue.js 官网 结论的一处的错误"></a>Vue.js 官网 结论的一处的错误</h2><h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><blockquote>
+        <h2 id="Vue-js-官网-结论的一处的错误"><a href="#Vue-js-官网-结论的一处的错误" class="headerlink" title="Vue.js 官网 结论的一处的错误"></a>Vue.js 官网 结论的一处的错误</h2><h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><blockquote>
 <p>为什么说是对Vue.js官网一处结论描述错误的探究呢？主要是在学习 Composition API 的 <code>setup()</code>函数发现官网有一段这样的模式</p>
 <p><code>When</code>setup<code> is executed, the component instance has not been created yet. As a result, you will only be able to access the following properties:</code> </p>
 <p>其含义就是：执行 <code>setup</code> 时，组件实例尚未被创建。因此，你只能访问以下 property，下图就是官方对此的描述，真实情况如其所说吗？</p>
@@ -133,6 +132,13 @@
 
     
 
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/io/tags/Vue/">Vue</a>
+    </span>
     
 
     </div>
