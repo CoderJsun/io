@@ -57,6 +57,82 @@
 
   
     
+    <h3 class="article-title"><a href="/io/2021/06/18/Mixin合并规则/"><span>Mixin合并规则</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/io/2021/06/18/Mixin合并规则/" rel="bookmark">
+        <time class="entry-date published" datetime="2021-06-18T02:41:53.000Z">
+          2021-06-18
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h2 id="Mixin合并规则"><a href="#Mixin合并规则" class="headerlink" title="Mixin合并规则"></a>Mixin合并规则</h2><h3 id="Mixin-是什么？"><a href="#Mixin-是什么？" class="headerlink" title="Mixin 是什么？"></a>Mixin 是什么？</h3><ul>
+<li><p>官方定义 ：</p>
+<p>Mixin 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能。一个 mixin 对象可以包含任意组件选项。当组件使用 mixin 对象时，所有 mixin 对象的选项将被“混合”进入该组件本身的选项。</p>
+</li>
+</ul>
+<h3 id="选项合并规则？"><a href="#选项合并规则？" class="headerlink" title="选项合并规则？"></a>选项合并规则？</h3><p>探索后总结出三个点</p>
+<h4 id="一、data函数返回值对象"><a href="#一、data函数返回值对象" class="headerlink" title="一、data函数返回值对象"></a>一、data函数返回值对象</h4><ul>
+<li>默认情况下会进行合并</li>
+<li>返回值对象如果存在冲突，会以组件自身的数据为优先</li>
+</ul>
+<p>代码佐证：</p>
+<p>在 Mixin 对象中定义了 Message 属性，在 App.vue 中也定义了 Message 属性</p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0886e5c5813b4b5eb40e3a28cb44ec62~tplv-k3u1fbpfcp-watermark.image" alt="截屏2021-06-18 上午10.34.50.png"></p>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a49a953115864e158477d36e2a8aee04~tplv-k3u1fbpfcp-watermark.image" alt="截屏2021-06-18 上午10.35.02.png"></p>
+<p>结果不出意料的会显示 <code> Node.js是世界上最好的语言</code> </p>
+<h4 id="二、生命周期钩子函数"><a href="#二、生命周期钩子函数" class="headerlink" title="二、生命周期钩子函数"></a>二、生命周期钩子函数</h4><ul>
+<li>钩子函数会被合并到数组中，在合适的时机都会被调用</li>
+</ul>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7a305c624f240fb8242c2c9b53a3e7c~tplv-k3u1fbpfcp-watermark.image" alt="钩子函数.png"></p>
+<p>通过代码执行结果也是验证了这个结论，有兴趣可以读vue-next源码，它里面本质就是这样做的。</p>
+<h4 id="三、对象类型"><a href="#三、对象类型" class="headerlink" title="三、对象类型"></a>三、对象类型</h4><ul>
+<li>如果都有methods选项且定义了实现，那么都会生效</li>
+<li>如果对象的key相同，则只会取组件对象的键值对</li>
+</ul>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/io/tags/Vue/">Vue</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
     <h3 class="article-title"><a href="/io/2021/05/24/邂逅 woker/"><span>邂逅CLI开发-woker开发过程</span></a></h3>
     
   
@@ -77,7 +153,7 @@
   <div class="article-content">
     <div class="entry">
       
-        <h2 id="邂逅CLI开发-woker开发过程"><a href="#邂逅CLI开发-woker开发过程" class="headerlink" title="邂逅CLI开发-woker开发过程"></a>邂逅CLI开发-woker开发过程</h2><p>在前端开发过程中，我们会使用各种各样的架手架 vue-cli、create-react-app等工具。</p>
+        <h2 id="邂逅CLI开发-woker开发过程"><a href="#邂逅CLI开发-woker开发过程" class="headerlink" title="邂逅CLI开发-woker开发过程"></a>邂逅CLI开发-woker开发过程</h2><p>在前端开发过程中，我们会使用各种各样的脚手架 vue-cli、create-react-app等工具。</p>
 <p>这些工具是怎么开发出来的？当我们输入一个命令其内部帮我们处理了哪些事情？</p>
 <p>最近写了一个叫 woker 的小工具，记录下其开发过程。文档会分成两部分</p>
 <blockquote>
@@ -97,7 +173,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如：cd woker</span><br></pre></td></tr></table></figure></li>
 <li><p>创建 package.json文件</p>
 <p>在终端执行<code>  npm init -y</code> ，即可生成  package.json 文件</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;woker&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;vue-cli&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;bin&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;woker&quot;</span>: <span class="string">&quot;index.js&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;keywords&quot;</span>: [<span class="string">&quot;vue-cli&quot;</span>,<span class="string">&quot;coderz&quot;</span>,<span class="string">&quot;vue&quot;</span>,<span class="string">&quot;woker&quot;</span>],</span><br><span class="line">  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;coderz&quot;</span>, </span><br><span class="line">  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span>,</span><br><span class="line">  <span class="string">&quot;homepage&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span>,</span><br><span class="line">  <span class="string">&quot;repository&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;type&quot;</span>: <span class="string">&quot;git&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;commander&quot;</span>: <span class="string">&quot;^7.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;download-git-repo&quot;</span>: <span class="string">&quot;^3.0.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;ejs&quot;</span>: <span class="string">&quot;^3.1.6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;inquirer&quot;</span>: <span class="string">&quot;^8.0.0&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;woker&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;vue-cli&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;bin&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;woker&quot;</span>: <span class="string">&quot;index.js&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;keywords&quot;</span>: [<span class="string">&quot;vue-cli&quot;</span>,<span class="string">&quot;coderz&quot;</span>,<span class="string">&quot;vue&quot;</span>,<span class="string">&quot;woker&quot;</span>],</span><br><span class="line">  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;coderz&quot;</span>, </span><br><span class="line">  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span>,</span><br><span class="line">  <span class="string">&quot;homepage&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span>,</span><br><span class="line">  <span class="string">&quot;repository&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;type&quot;</span>: <span class="string">&quot;git&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;commander&quot;</span>: <span class="string">&quot;^7.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;download-git-repo&quot;</span>: <span class="string">&quot;^3.0.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;ejs&quot;</span>: <span class="string">&quot;^3.1.6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;inquirer&quot;</span>: <span class="string">&quot;^8.0.0&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 <li><p>配置文件夹</p>
 <p>最终 woker 项目中文件目录结构</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">├── lib</span><br><span class="line">| ├── config <span class="comment">// 配置文件</span></span><br><span class="line">│ │   └── repo_config.js</span><br><span class="line">| ├── core <span class="comment">// 核心文件</span></span><br><span class="line">│ │   ├── react <span class="comment">// 待增加... </span></span><br><span class="line">│ │   ├── vue</span><br><span class="line">│ │   ├── └── action.js</span><br><span class="line">│ │   ├── └── create.js </span><br><span class="line">│ │   ├── └── help.js</span><br><span class="line">| ├── templates <span class="comment">// ejs 模板文件</span></span><br><span class="line">│ │   └── vue-component.ejs</span><br><span class="line">│ │   └── vue-router.ejs</span><br><span class="line">│ │   └── vue-store.ejs</span><br><span class="line">│ │   └── vue-types.ejs</span><br><span class="line">| ├── untils <span class="comment">// </span></span><br><span class="line">│ │   └── terminal.js</span><br><span class="line">│ │   └── utils.js</span><br><span class="line">├── index.js</span><br><span class="line">├── package-lock.json</span><br><span class="line">├── package.json</span><br><span class="line">├── README.md</span><br></pre></td></tr></table></figure></li>
