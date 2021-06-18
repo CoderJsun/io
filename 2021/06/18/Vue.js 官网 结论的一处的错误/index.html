@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>coderz - 记录每一刻 | coderz</title>
+
+  
+  <meta name="author" content="coderz">
+  
+
+  
+  <meta name="description" content="coderz- 记录个人日常">
+  
+
+  
+  
+  <meta name="keywords" content="">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  
+
+  <meta property="og:site_name" content="coderz - 记录每一刻"/>
+
+  
+  <meta property="og:image" content="/io/favicon.ico"/>
+  
+
+  <link href="/io/favicon.ico" rel="icon">
+  <link rel="alternate" href="/io/atom.xml" title="coderz - 记录每一刻" type="application/atom+xml">
+  <link rel="stylesheet" href="/io/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/io/">coderz - 记录每一刻</a>
+    </h1>
+    <p class="site-description">coderz</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span></span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/io/2021/06/18/Vue.js 官网 结论的一处的错误/" rel="bookmark">
+        <time class="entry-date published" datetime="2021-06-18T08:30:20.069Z">
+          2021-06-18
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>title: 执行 <code>setup</code> 时，组件实例真的如官方所说未创建？<br>date: 2021-06-18 17:27:53<br>tags: Vue</p>
+<h2 id="Vue-js-官网-结论的一处的错误"><a href="#Vue-js-官网-结论的一处的错误" class="headerlink" title="Vue.js 官网 结论的一处的错误"></a>Vue.js 官网 结论的一处的错误</h2><h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><blockquote>
+<p>为什么说是对Vue.js官网一处结论描述错误的探究呢？主要是在学习 Composition API 的 <code>setup()</code>函数发现官网有一段这样的模式</p>
+<p><code>When</code>setup<code> is executed, the component instance has not been created yet. As a result, you will only be able to access the following properties:</code> </p>
+<p>其含义就是：执行 <code>setup</code> 时，组件实例尚未被创建。因此，你只能访问以下 property，下图就是官方对此的描述，真实情况如其所说吗？</p>
+</blockquote>
+<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88d7a049391d4e548bb5ba5876a055e3~tplv-k3u1fbpfcp-watermark.image" alt="截屏2021-06-18 下午4.30.39.png"></p>
+<h4 id="二、验证这个错误"><a href="#二、验证这个错误" class="headerlink" title="二、验证这个错误"></a>二、验证这个错误</h4><p>正所谓了解真相，方能自由。探索这个问题的对错必须依赖 Vue3源码</p>
+<ul>
+<li>下载 vue-next 源码</li>
+</ul>
+<p>在整个源码中核心文件：<code> runtime-core</code>、<code> runtime-dom</code>、<code> compiler-core</code>、<code> runtime-dom</code> 几个文件</p>
+<ul>
+<li>进入到 runtime-core 文件夹</li>
+<li>打开 <code>renderer.ts</code>文件</li>
+</ul>
+<p>我们可以从544行中的这段代码开始一步步分析</p>
+<h5 id="2-1-处理组件节点，调用-processComponent"><a href="#2-1-处理组件节点，调用-processComponent" class="headerlink" title="2.1 处理组件节点，调用 processComponent"></a>2.1 处理组件节点，调用 <code>processComponent</code></h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (shapeFlag &amp; ShapeFlags.COMPONENT) &#123;          </span><br><span class="line">  <span class="comment">// 处理组件节点</span></span><br><span class="line">  processComponent(</span><br><span class="line">    n1,</span><br><span class="line">    n2,</span><br><span class="line">    container,</span><br><span class="line">    anchor,</span><br><span class="line">    parentComponent,</span><br><span class="line">    parentSuspense,</span><br><span class="line">    isSVG,</span><br><span class="line">    slotScopeIds,</span><br><span class="line">    optimized</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里我们来看看 <code> processComponent</code> 的实现中很明显 已经创建了 <code> instance</code> 这么个实例, 接着在1335行中开始调用 <code> setupComponent(instance)</code> 将 上面创建的<code> instance</code> 传递了出去</p>
+<h4 id="2-2-组件挂载，调用-mountComponent"><a href="#2-2-组件挂载，调用-mountComponent" class="headerlink" title="2.2 组件挂载，调用 mountComponent"></a>2.2 组件挂载，调用 <code>mountComponent</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">// 组件挂载</span></span><br><span class="line"><span class="keyword">const</span> mountComponent: MountComponentFn = (</span><br><span class="line">  initialVNode,</span><br><span class="line">  container, </span><br><span class="line">  anchor,</span><br><span class="line">  parentComponent,</span><br><span class="line">  parentSuspense,</span><br><span class="line">  isSVG,</span><br><span class="line">  optimized</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 2.x compat may pre-creaate the component instance before actually</span></span><br><span class="line">  <span class="comment">// mounting</span></span><br><span class="line">  <span class="keyword">const</span> compatMountInstance = __COMPAT__ &amp;&amp; initialVNode.component</span><br><span class="line">  <span class="comment">// 在这里创建了 ComponentInternalInstance </span></span><br><span class="line">  <span class="keyword">const</span> instance: ComponentInternalInstance =</span><br><span class="line">  compatMountInstance ||</span><br><span class="line">    (initialVNode.component = createComponentInstance(</span><br><span class="line">    initialVNode,</span><br><span class="line">    parentComponent,</span><br><span class="line">    parentSuspense</span><br><span class="line">  ))</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2-开始处理-setupComponent"><a href="#2-2-开始处理-setupComponent" class="headerlink" title="2.2 开始处理 setupComponent"></a>2.2 开始处理 <code>setupComponent</code></h4><p>该函数在 <code>component.ts</code>中进行了处理，那么它又是如何处理呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">) =&gt; &#123;</span><br><span class="line"> <span class="comment">// 2.x compat may pre-creaate the component instance before actually</span></span><br><span class="line"> <span class="comment">// mounting</span></span><br><span class="line"> <span class="keyword">const</span> compatMountInstance = __COMPAT__ &amp;&amp; initialVNode.component</span><br><span class="line"> <span class="keyword">const</span> instance: ComponentInternalInstance =</span><br><span class="line">   compatMountInstance ||(initialVNode.component = createComponentInstance(</span><br><span class="line">   initialVNode,</span><br><span class="line">   parentComponent,</span><br><span class="line">   parentSuspense</span><br><span class="line">    ))</span><br><span class="line">  <span class="keyword">if</span> (__DEV__ &amp;&amp; instance.type.__hmrId) &#123;</span><br><span class="line">    registerHMR(instance)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (__DEV__) &#123;</span><br><span class="line">    pushWarningContext(initialVNode)</span><br><span class="line">    startMeasure(instance, <span class="string">`mount`</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// inject renderer internals for keepAlive</span></span><br><span class="line">  <span class="keyword">if</span> (isKeepAlive(initialVNode)) &#123;</span><br><span class="line">    ;(instance.ctx <span class="keyword">as</span> KeepAliveContext).renderer = internals</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// resolve props and slots for setup context</span></span><br><span class="line">   <span class="keyword">if</span> (!(__COMPAT__ &amp;&amp; compatMountInstance)) &#123;</span><br><span class="line">   <span class="keyword">if</span> (__DEV__) &#123;</span><br><span class="line">     startMeasure(instance, <span class="string">`init`</span>)</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">// 开始调用 setup,将 instance 实例传递进入</span></span><br><span class="line">   setupComponent(instance)</span><br><span class="line">    <span class="keyword">if</span> (__DEV__) &#123;</span><br><span class="line">      endMeasure(instance, <span class="string">`init`</span>)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调转到它的实现文件中，我们可以看到这样一段代码实现，在这个函数中处理几件事情</p>
+<ul>
+<li>调用 <code>setupStatefulComponent</code> 初始化有状态的组件</li>
+<li>初始化<code> props</code> 、 <code> slots</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">setupComponent</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  instance: ComponentInternalInstance,</span></span></span><br><span class="line"><span class="function"><span class="params">  isSSR = <span class="literal">false</span></span></span></span><br><span class="line"><span class="function"><span class="params"></span>) </span>&#123;</span><br><span class="line">  isInSSRComponentSetup = isSSR</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> &#123; props, children &#125; = instance.vnode</span><br><span class="line">  <span class="keyword">const</span> isStateful = isStatefulComponent(instance)</span><br><span class="line">  initProps(instance, props, isStateful, isSSR)</span><br><span class="line">  initSlots(instance, children)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> setupResult = isStateful</span><br><span class="line">    ? setupStatefulComponent(instance, isSSR)</span><br><span class="line">    : <span class="literal">undefined</span></span><br><span class="line">  isInSSRComponentSetup = <span class="literal">false</span></span><br><span class="line">  <span class="keyword">return</span> setupResult</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-提取-setup函数"><a href="#2-3-提取-setup函数" class="headerlink" title="2.3 提取  setup函数"></a>2.3 提取 <code> setup</code>函数</h4><p>在这里通过 <code>const &#123; setup &#125; = Component</code>拿到 该函数，看到这段代码也就能得出一个结论</p>
+<ul>
+<li>如果实现了 setup函数，那么通过vue2 options api 是不会生效的</li>
+<li>vue3是兼容 vue2  options api</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2. call setup()</span></span><br><span class="line"><span class="comment">// 在这里开始处理 setup()函数</span></span><br><span class="line"><span class="keyword">const</span> &#123; setup &#125; = Component</span><br><span class="line"><span class="keyword">if</span> (setup) &#123;</span><br><span class="line">  <span class="keyword">const</span> setupContext = (instance.setupContext =</span><br><span class="line">  setup.length &gt; <span class="number">1</span> ? createSetupContext(instance) : <span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line">  currentInstance = instance</span><br><span class="line">  pauseTracking()</span><br><span class="line">  <span class="keyword">const</span> setupResult = callWithErrorHandling(</span><br><span class="line">    setup,</span><br><span class="line">    instance,</span><br><span class="line">    ErrorCodes.SETUP_FUNCTION,</span><br><span class="line">    [__DEV__ ? shallowReadonly(instance.props) : instance.props, setupContext]</span><br><span class="line">  )</span><br><span class="line">  resetTracking()</span><br><span class="line">  currentInstance = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (isPromise(setupResult)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (isSSR) &#123;</span><br><span class="line">      <span class="comment">// return the promise so server-renderer can wait on it</span></span><br><span class="line">    <span class="keyword">return</span> setupResult</span><br><span class="line">    .then(<span class="function">(<span class="params">resolvedResult: unknown</span>) =&gt;</span> &#123;</span><br><span class="line">       handleSetupResult(instance, resolvedResult, isSSR)</span><br><span class="line">      &#125;)</span><br><span class="line">     .catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">       handleError(e, instance, ErrorCodes.SETUP_FUNCTION)</span><br><span class="line">      &#125;)</span><br><span class="line">   &#125; <span class="keyword">else</span> <span class="keyword">if</span> (__FEATURE_SUSPENSE__) &#123;</span><br><span class="line">      <span class="comment">// async setup returned Promise.</span></span><br><span class="line">      <span class="comment">// bail here and wait for re-entry.</span></span><br><span class="line">      instance.asyncDep = setupResult</span><br><span class="line">   &#125; <span class="keyword">else</span> <span class="keyword">if</span> (__DEV__) &#123;</span><br><span class="line">      warn(</span><br><span class="line">          <span class="string">`setup() returned a Promise, but the version of Vue you are using `</span> +</span><br><span class="line">            <span class="string">`does not support it yet.`</span></span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">     handleSetupResult(instance, setupResult, isSSR)</span><br><span class="line">  &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    finishComponentSetup(instance, isSSR) </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-4-统一执行-callWithErrorHandling-函数"><a href="#2-4-统一执行-callWithErrorHandling-函数" class="headerlink" title="2.4 统一执行  callWithErrorHandling 函数"></a>2.4 统一执行 <code> callWithErrorHandling</code> 函数</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">callWithErrorHandling</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  fn: <span class="built_in">Function</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">  instance: ComponentInternalInstance | <span class="literal">null</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">  type: ErrorTypes,</span></span></span><br><span class="line"><span class="function"><span class="params">  args?: unknown[]</span></span></span><br><span class="line"><span class="function"><span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> res</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    res = args ? fn(...args) : fn()</span><br><span class="line">  &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">    handleError(err, instance, type)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个函数其实本质就是自己封装了一个 try catch ，在其内部来来调 fn</p>
+<h3 id="三、结论"><a href="#三、结论" class="headerlink" title="三、结论"></a>三、结论</h3><ul>
+<li>结合源码一分析，就很确定 执行 <code>setup</code> 时，组件实例 <code>已经创建</code>，官方描述是有问题的~</li>
+</ul>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2021 coderz
+    
+  </p>
+</footer>
+    
+    
+  </div>
+</div>
+</body>
+</html>
