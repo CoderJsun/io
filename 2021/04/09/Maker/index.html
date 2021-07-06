@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Maker | coderz - 记录每一刻 | coderz</title>
+
+  
+  <meta name="author" content="coderz">
+  
+
+  
+  <meta name="description" content="coderz- 记录个人日常">
+  
+
+  
+  
+  <meta name="keywords" content="iOS">
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="Maker"/>
+
+  <meta property="og:site_name" content="coderz - 记录每一刻"/>
+
+  
+  <meta property="og:image" content="/io/favicon.ico"/>
+  
+
+  <link href="/io/favicon.ico" rel="icon">
+  <link rel="alternate" href="/io/atom.xml" title="coderz - 记录每一刻" type="application/atom+xml">
+  <link rel="stylesheet" href="/io/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/io/">coderz - 记录每一刻</a>
+    </h1>
+    <p class="site-description">coderz</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    <article>
+
+  
+    
+    <h3 class="article-title"><span>Maker</span></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/io/2021/04/09/Maker/" rel="bookmark">
+        <time class="entry-date published" datetime="2021-04-09T09:38:59.000Z">
+          2021-04-09
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>名字没想好，就暂且叫它   <a target="_blank" rel="noopener" href="https://github.com/coderx-waper/Maker.git">Maker</a></p>
+<h3 id="写Maker-动机"><a href="#写Maker-动机" class="headerlink" title="写Maker 动机"></a>写Maker 动机</h3><p>自<code> Masonry</code> 的横空出世，其链式编程的姿势屡试不爽，相比于iOS的书写姿势更见其🐂， <code>Masonry</code> 中能实现这种链式编程方式那么iOS控件创建也一定能实现这种方式，在看完其内部实现后，在闲余时间决定自己将 UIKit 重写一遍达到其一样的效果，希望在开发过程中对开发效率和代码的可读性有一定的帮助。</p>
+<h3 id="Maker-引入"><a href="#Maker-引入" class="headerlink" title="Maker 引入"></a>Maker 引入</h3><blockquote>
+<h5 id="支持通过-pod-Maker"><a href="#支持通过-pod-Maker" class="headerlink" title="支持通过 pod Maker"></a>支持通过<code> pod Maker</code></h5></blockquote>
+<blockquote>
+<h5 id="可直接下载引入"><a href="#可直接下载引入" class="headerlink" title="可直接下载引入"></a>可直接下载引入</h5></blockquote>
+<h3 id="用法示例"><a href="#用法示例" class="headerlink" title="用法示例"></a>用法示例</h3><h6 id="控件创建🌰"><a href="#控件创建🌰" class="headerlink" title="控件创建🌰"></a>控件创建🌰</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[UILabel generator:^(Maker * _Nonnull maker) &#123;</span><br><span class="line">        maker.frame(CGRectMake(100, 100, 100, 30)).text(@&quot;哈哈&quot;).textAlignment(NSTextAlignmentCenter).textColor([UIColor whiteColor]).view(self.view).backGroudColor([UIColor redColor]).radian(CGSizeMake(25, 25)).click(^&#123;</span><br><span class="line">            NSLog(@&quot;click&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure>
+
+<h6 id="网络数据请求🌰"><a href="#网络数据请求🌰" class="headerlink" title="网络数据请求🌰"></a>网络数据请求🌰</h6><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span> patch:^(Patcher * _Nonnull patcher) &#123;</span><br><span class="line">        patcher.role(<span class="built_in">UIPatcherRoleGet</span>).url(<span class="string">@&quot;https://zhqd.shiminjia.com/weather.php&quot;</span>).indicator(<span class="literal">YES</span>);</span><br><span class="line">        [patcher send:^(<span class="keyword">id</span>  _Nonnull respone) &#123;</span><br><span class="line">            <span class="built_in">NSLog</span>(<span class="string">@&quot;respone---%@&quot;</span>,respone);</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure>
+
+<h3 id="版本设计基线"><a href="#版本设计基线" class="headerlink" title="版本设计基线"></a>版本设计基线</h3><p>Maker中几乎涵盖了日常开发过程中用到的对象，后期还会增加一些拓展，也期盼您有更好的想法为其拓展。</p>
+<h3 id="期待更好想法"><a href="#期待更好想法" class="headerlink" title="期待更好想法"></a>期待更好想法</h3><p>如果您有更多好的设计和想法，可以加入我们~</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+    
+
+    <span class="post-tags">
+      <i class="icon-tags"></i>
+        <a href="/io/tags/iOS/">iOS</a>
+    </span>
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+  
+
+
+
+
+
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2021 coderz
+    
+  </p>
+</footer>
+    
+    
+  </div>
+</div>
+</body>
+</html>
