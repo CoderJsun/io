@@ -1,85 +1,207 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>express | coderz - 记录每一刻 | coderz</title>
-
-  
-  <meta name="author" content="coderz">
-  
-
-  
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta name="description" content="coderz- 记录个人日常">
+  <meta name="keyword" content="hexo-theme, vuejs">
   
+    <link rel="shortcut icon" href="/io/css/images/logo.png">
+  
+  <title>
+    
+      express | coderz - 记录每一刻
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/io/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/io/js/qrious.js"></script>
 
   
   
-  <meta name="keywords" content="NodeJs">
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
   
 
-  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  <meta property="og:title" content="express"/>
-
-  <meta property="og:site_name" content="coderz - 记录每一刻"/>
 
   
-  <meta property="og:image" content="/io/favicon.ico"/>
   
+    
+<script src="/io/js/local-search.js"></script>
 
-  <link href="/io/favicon.ico" rel="icon">
-  <link rel="alternate" href="/io/atom.xml" title="coderz - 记录每一刻" type="application/atom+xml">
-  <link rel="stylesheet" href="/io/css/style.css" media="screen" type="text/css">
+
 <meta name="generator" content="Hexo 5.4.0"></head>
-
-
-<body>
-<div class="blog">
-  <div class="content">
-
-    <header>
-  <div class="site-branding">
-    <h1 class="site-title">
-      <a href="/io/">coderz - 记录每一刻</a>
-    </h1>
-    <p class="site-description">coderz</p>
-  </div>
-  <nav class="site-navigation">
-    <ul>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/io/">
+      <div class="logo"></div>
+      <span>coderz - 记录每一刻</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/io/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
       
     </ul>
-  </nav>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/io/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/series/" class="menu-link">Series</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
 </header>
 
-    <main class="site-main posts-loop">
-    <article>
-
-  
-    
-    <h3 class="article-title"><span>express</span></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/io/2021/05/21/nodejs-express/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-05-21T03:30:00.000Z">
-          2021-05-21
-        </time>
-      </a>
-    </span>
+    <div id="article-banner">
+  <h2>express</h2>
+  <p class="post-date">2021-05-21</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
   </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h1 id="express"><a href="#express" class="headerlink" title="express"></a>express</h1><p>本节一起来探究node中常用的<code>express</code>核心中的5个问题</p>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="express"><a href="#express" class="headerlink" title="express"></a>express</h1><p>本节一起来探究node中常用的<code>express</code>核心中的5个问题</p>
 <h3 id="1-调用-express-到底创建了什么❓"><a href="#1-调用-express-到底创建了什么❓" class="headerlink" title="1. 调用 express() 到底创建了什么❓"></a>1. 调用 express() 到底创建了什么❓</h3><p>打开express core的 lib/express.js 会发现有这么一段代码</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span> = <span class="built_in">module</span>.exports = createApplication;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createApplication</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> app = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">    app.handle(req, res, next);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  mixin(app, EventEmitter.prototype, <span class="literal">false</span>);</span><br><span class="line">  mixin(app, proto, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// expose the prototype that will get set on requests</span></span><br><span class="line">  app.request = <span class="built_in">Object</span>.create(req, &#123;</span><br><span class="line">    app: &#123; <span class="attr">configurable</span>: <span class="literal">true</span>, <span class="attr">enumerable</span>: <span class="literal">true</span>, <span class="attr">writable</span>: <span class="literal">true</span>, <span class="attr">value</span>: app &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// expose the prototype that will get set on responses</span></span><br><span class="line">  app.response = <span class="built_in">Object</span>.create(res, &#123;</span><br><span class="line">    app: &#123; <span class="attr">configurable</span>: <span class="literal">true</span>, <span class="attr">enumerable</span>: <span class="literal">true</span>, <span class="attr">writable</span>: <span class="literal">true</span>, <span class="attr">value</span>: app &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  app.init();</span><br><span class="line">  <span class="keyword">return</span> app;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>很明显在调用 express()本质是执行了一段 <code>createApplication</code> 函数</p>
@@ -94,54 +216,212 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line">router.use(path, <span class="function"><span class="keyword">function</span> <span class="title">mounted_app</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> orig = req.app;</span><br><span class="line">      fn.handle(req, res, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">        setPrototypeOf(req, orig.request)</span><br><span class="line">        setPrototypeOf(res, orig.response)</span><br><span class="line">        next(err);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="string">``</span><span class="string">``</span></span><br><span class="line">跳到lib/router/index.js你的疑问即可揭晓。在其底层proto.use = <span class="function"><span class="keyword">function</span> <span class="title">use</span>(<span class="params">fn</span>)中 其实是` <span class="title">new</span> <span class="title">Layer</span>(<span class="params"></span>)` ，然后将生成的图层 <span class="title">layer</span> <span class="title">push</span>到了 <span class="title">stack</span>中，那么这个 <span class="title">stack</span>就是初期绑定到<span class="title">router</span>原型上的一个 <span class="title">stack</span>数组，<span class="title">layer</span>中我们的回调函数，`<span class="title">this</span>.<span class="title">stack</span>.<span class="title">push</span>(<span class="params">layer</span>)`这里的 <span class="title">this</span>本质就是<span class="title">router</span>对象。</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">### 4. 用户发送了请求，中间件是怎么被回调的❓</span></span><br><span class="line"><span class="function">当一个请求过来后，底层本质是处理了 <span class="title">router</span>中的<span class="title">handle</span>函数 `<span class="title">router</span>.<span class="title">handle</span>(<span class="params">req, res, done</span>)</span>;<span class="string">` 在 `</span>proto.handle()<span class="string">` 函数中 通过self.stack拿到我们的 stack，第一次主动调用 next() 核心函数：</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line">  <span class="comment">// idx = 0 ; // init </span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">next</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> layerError = err === <span class="string">&#x27;route&#x27;</span></span><br><span class="line">      ? <span class="literal">null</span></span><br><span class="line">      : err;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// remove added slash</span></span><br><span class="line">    <span class="keyword">if</span> (slashAdded) &#123;</span><br><span class="line">      req.url = req.url.substr(<span class="number">1</span>);</span><br><span class="line">      slashAdded = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// restore altered req.url</span></span><br><span class="line">    <span class="keyword">if</span> (removed.length !== <span class="number">0</span>) &#123;</span><br><span class="line">      req.baseUrl = parentUrl;</span><br><span class="line">      req.url = protohost + removed + req.url.substr(protohost.length);</span><br><span class="line">      removed = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// signal to exit router</span></span><br><span class="line">    <span class="keyword">if</span> (layerError === <span class="string">&#x27;router&#x27;</span>) &#123;</span><br><span class="line">      setImmediate(done, <span class="literal">null</span>)</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// no more matching layers</span></span><br><span class="line">    <span class="keyword">if</span> (idx &gt;= stack.length) &#123;</span><br><span class="line">      setImmediate(done, layerError);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// get pathname of request</span></span><br><span class="line">    <span class="keyword">var</span> path = getPathname(req);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (path == <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> done(layerError);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// find next matching layer</span></span><br><span class="line">    <span class="keyword">var</span> layer;</span><br><span class="line">    <span class="keyword">var</span> match;</span><br><span class="line">    <span class="keyword">var</span> route;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (match !== <span class="literal">true</span> &amp;&amp; idx &lt; stack.length) &#123;</span><br><span class="line">      layer = stack[idx++];</span><br><span class="line">      match = matchLayer(layer, path);</span><br><span class="line">      route = layer.route;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> match !== <span class="string">&#x27;boolean&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// hold on to layerError</span></span><br><span class="line">        layerError = layerError || match;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (match !== <span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (!route) &#123;</span><br><span class="line">        <span class="comment">// process non-route handlers normally</span></span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (layerError) &#123;</span><br><span class="line">        <span class="comment">// routes do not match with a pending error</span></span><br><span class="line">        match = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> method = req.method;</span><br><span class="line">      <span class="keyword">var</span> has_method = route._handles_method(method);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// build up automatic options response</span></span><br><span class="line">      <span class="keyword">if</span> (!has_method &amp;&amp; method === <span class="string">&#x27;OPTIONS&#x27;</span>) &#123;</span><br><span class="line">        appendMethods(options, route._options());</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// don&#x27;t even bother matching route</span></span><br><span class="line">      <span class="keyword">if</span> (!has_method &amp;&amp; method !== <span class="string">&#x27;HEAD&#x27;</span>) &#123;</span><br><span class="line">        match = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// no match</span></span><br><span class="line">    <span class="keyword">if</span> (match !== <span class="literal">true</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> done(layerError);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// store route for dispatch on change</span></span><br><span class="line">    <span class="keyword">if</span> (route) &#123;</span><br><span class="line">      req.route = route;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Capture one-time layer values</span></span><br><span class="line">    req.params = self.mergeParams</span><br><span class="line">      ? mergeParams(layer.params, parentParams)</span><br><span class="line">      : layer.params;</span><br><span class="line">    <span class="keyword">var</span> layerPath = layer.path;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// this should be done for the layer</span></span><br><span class="line">    self.process_params(layer, paramcalled, req, res, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="keyword">return</span> next(layerError || err);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (route) &#123;</span><br><span class="line">        <span class="keyword">return</span> layer.handle_request(req, res, next);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      trim_prefix(layer, layerError, layerPath, path);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 <p>找到之后又调用了 layer 的<code>handle_request()</code>函数，这个函数又在处理什么呢？接着往下看。其实他做的事情本质上是调用核心<code>fn(req, res, next);</code><br>fn是什么?<br>fn就是从 layer中取出的 <code>handle</code></p>
 <h3 id="5-next为什么会自动执行下一个中间件❓"><a href="#5-next为什么会自动执行下一个中间件❓" class="headerlink" title="5. next为什么会自动执行下一个中间件❓"></a>5. next为什么会自动执行下一个中间件❓</h3><p>理解了第4个问题流程，当我们自己注册了中间件，调用了 next() 框架底层就会来到next()匹配下一个stack进行layer的执行</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/io/io/tags#NodeJs" >
+    <span class="tag-code">NodeJs</span>
+  </a>
 
-      
-    </div>
-
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/io/2021/04/09/husky/">
+        <span class="nav-arrow">← </span>
+        
+          husky
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/io/2021/05/24/%E9%82%82%E9%80%85%20woker/">
+        
+          邂逅CLI开发-woker开发过程
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
   </div>
 
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
+    <!-- NAV END -->
+    <!-- 打赏 START -->
     
-
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
     
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
     
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/io/tags/NodeJs/">NodeJs</a>
-    </span>
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
     
-
-    </div>
-
+    <!-- 二维码 END -->
     
-  </div>
-</article>
-
+      <!-- Utterances START -->
+      <div id="utterances"></div>
+      <script src="https://utteranc.es/client.js"
+        repo=""
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async></script>    
+      <!-- Utterances END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
   
-
-
-
-
-
-
-    </main>
-
-    <footer class="site-footer">
-  <p class="site-info">
-    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
-    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
-    </br>
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
     
-    &copy; 2021 coderz
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#express"><span class="toc-nav-text">express</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-%E8%B0%83%E7%94%A8-express-%E5%88%B0%E5%BA%95%E5%88%9B%E5%BB%BA%E4%BA%86%E4%BB%80%E4%B9%88%E2%9D%93"><span class="toc-nav-text">1. 调用 express() 到底创建了什么❓</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-app-listen-%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E4%BA%8B%E6%83%85%E2%9D%93"><span class="toc-nav-text">2. app.listen()做了哪些事情❓</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-1-app%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E5%90%97%E2%9D%93%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AF%E4%BB%A5%E5%8E%BB%E8%B0%83%E7%94%A8-listen"><span class="toc-nav-text">2.1 app不是一个函数吗❓为什么可以去调用 listen</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-2-%E5%9C%A8createApplication%E4%B8%AD%E5%B9%B6%E6%B2%A1%E6%9C%89%E5%8F%91%E7%8E%B0app%E4%B8%AD%E6%9C%89listen%E5%87%BD%E6%95%B0"><span class="toc-nav-text">2.2 在createApplication中并没有发现app中有listen函数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-app-use-%E4%B8%AD%E9%97%B4%E4%BB%B6-%E5%86%85%E9%83%A8%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%E2%9D%93"><span class="toc-nav-text">3. app.use(中间件)内部发生了什么❓</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5-next%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%87%AA%E5%8A%A8%E6%89%A7%E8%A1%8C%E4%B8%8B%E4%B8%80%E4%B8%AA%E4%B8%AD%E9%97%B4%E4%BB%B6%E2%9D%93"><span class="toc-nav-text">5. next为什么会自动执行下一个中间件❓</span></a></li></ol></li></ol></li></ol>
     
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://coderx-waper.github.io/io/2021/05/21/nodejs-express/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', '/css/images/error_icon.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== '/css/images/error_icon.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
   </p>
 </footer>
-    
-    
-  </div>
-</div>
-</body>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/io/js/script.js"></script>
+
+
+  </body>
 </html>

@@ -1,887 +1,414 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>coderz - 记录每一刻 | coderz</title>
-
-  
-  <meta name="author" content="coderz">
-  
-
-  
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta name="description" content="coderz- 记录个人日常">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/io/css/images/logo.png">
+  
+  <title>
+    
+      coderz - 记录每一刻
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/io/css/style.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/io/js/qrious.js"></script>
+
+  
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
   
 
-  
-
-  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
   
-
-  <meta property="og:site_name" content="coderz - 记录每一刻"/>
-
   
-  <meta property="og:image" content="/io/favicon.ico"/>
-  
+    
+<script src="/io/js/local-search.js"></script>
 
-  <link href="/io/favicon.ico" rel="icon">
-  <link rel="alternate" href="/io/atom.xml" title="coderz - 记录每一刻" type="application/atom+xml">
-  <link rel="stylesheet" href="/io/css/style.css" media="screen" type="text/css">
+
 <meta name="generator" content="Hexo 5.4.0"></head>
-
-
-<body>
-<div class="blog">
-  <div class="content">
-
-    <header>
-  <div class="site-branding">
-    <h1 class="site-title">
-      <a href="/io/">coderz - 记录每一刻</a>
-    </h1>
-    <p class="site-description">coderz</p>
-  </div>
-  <nav class="site-navigation">
-    <ul>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/io/">
+      <div class="logo"></div>
+      <span>coderz - 记录每一刻</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/io/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/series/" class="item-link">Series</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/io/about/" class="item-link">About</a>
+          
+        </li>
+      
+      
+        <li class="menu-item menu-item-search right-list">
+    <a role="button" class="popup-trigger">
+        <i class="fa fa-search fa-fw"></i>
+    </a>
+</li>
       
     </ul>
-  </nav>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/io/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/series/" class="menu-link">Series</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/io/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+    
+      <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+            <span class="search-icon">
+                <i class="fa fa-search"></i>
+            </span>
+            <div class="search-input-container">
+                <input autocomplete="off" autocapitalize="off"
+                    placeholder="Please enter your keyword(s) to search." spellcheck="false"
+                    type="search" class="search-input">
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+    
+  </div>
 </header>
 
-    <main class="site-main posts-loop">
-    
-  <article>
-
+    <main class="app-body">
   
-    
-    <h3 class="article-title"><a href="/io/2021/07/26/如何规范搭建一个vue工程项目/"><span>如何规范搭建一个Vue工程项目</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/io/2021/07/26/如何规范搭建一个vue工程项目/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-07-26T09:20:59.000Z">
-          2021-07-26
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/io/2021/07/26/%E5%A6%82%E4%BD%95%E8%A7%84%E8%8C%83%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAvue%E5%B7%A5%E7%A8%8B%E9%A1%B9%E7%9B%AE/">如何规范搭建一个Vue工程项目</a>
+      </h2>
+      <p class="article-date">July 26, 2021</p>
       
-        <h2 id="一-项目规范的五个步骤"><a href="#一-项目规范的五个步骤" class="headerlink" title="一. 项目规范的五个步骤"></a>一. 项目规范的五个步骤</h2><p>在实际项目中，一个项目通常会有多人进行开发维护，多人就会面临着种种不规范的问题，举个例子，在文件中有些同事喜欢使用””，有些同事喜欢使用’’，显然如果没有一个统一的规范整个工程会显得杂乱，不规整。</p>
-<p>那么手动一个个去改动显然也是不太现实的，所以从工程化手段入手来解决此类就很有必要，从 start 开始就对项目进行必要的设定来达到统一的开始标准</p>
-<h3 id="1-1-集成editorconfig配置"><a href="#1-1-集成editorconfig配置" class="headerlink" title="1.1. 集成editorconfig配置"></a>1.1. 集成editorconfig配置</h3><p>EditorConfig 有助于为不同 IDE 编辑器上处理同一项目的多个开发人员维护一致的编码风格。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># http://editorconfig.org</span></span><br><span class="line"></span><br><span class="line"><span class="string">root</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">[<span class="string">*</span>] <span class="comment"># 表示所有文件适用</span></span><br><span class="line"><span class="string">charset</span> <span class="string">=</span> <span class="string">utf-8</span> <span class="comment"># 设置文件字符集为 utf-8</span></span><br><span class="line"><span class="string">indent_style</span> <span class="string">=</span> <span class="string">space</span> <span class="comment"># 缩进风格（tab | space）</span></span><br><span class="line"><span class="string">indent_size</span> <span class="string">=</span> <span class="number">2</span> <span class="comment"># 缩进大小</span></span><br><span class="line"><span class="string">end_of_line</span> <span class="string">=</span> <span class="string">lf</span> <span class="comment"># 控制换行类型(lf | cr | crlf)</span></span><br><span class="line"><span class="string">trim_trailing_whitespace</span> <span class="string">=</span> <span class="literal">true</span> <span class="comment"># 去除行首的任意空白字符</span></span><br><span class="line"><span class="string">insert_final_newline</span> <span class="string">=</span> <span class="literal">true</span> <span class="comment"># 始终在文件末尾插入一个新行</span></span><br><span class="line"></span><br><span class="line">[<span class="string">*.md</span>] <span class="comment"># 表示仅 md 文件适用以下规则</span></span><br><span class="line"><span class="string">max_line_length</span> <span class="string">=</span> <span class="string">off</span></span><br><span class="line"><span class="string">trim_trailing_whitespace</span> <span class="string">=</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>VSCode需要安装一个插件：EditorConfig for VS Code</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsq2gh989yj30pj05ggmb.jpg" alt="image-20210722215138665"></p>
-<h3 id="1-2-使用prettier工具"><a href="#1-2-使用prettier工具" class="headerlink" title="1.2. 使用prettier工具"></a>1.2. 使用prettier工具</h3><p>Prettier 是一款强大的代码格式化工具，支持 JavaScript、TypeScript、CSS、SCSS、Less、JSX、Angular、Vue、GraphQL、JSON、Markdown 等语言，基本上前端能用到的文件格式它都可以搞定，是当下最流行的代码格式化工具。</p>
-<p>1.安装prettier</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install prettier -D</span><br></pre></td></tr></table></figure>
-
-<p>2.配置.prettierrc文件：</p>
-<ul>
-<li>useTabs：使用tab缩进还是空格缩进，选择false；</li>
-<li>tabWidth：tab是空格的情况下，是几个空格，选择2个；</li>
-<li>printWidth：当行字符的长度，推荐80，也有人喜欢100或者120；</li>
-<li>singleQuote：使用单引号还是双引号，选择true，使用单引号；</li>
-<li>trailingComma：在多行输入的尾逗号是否添加，设置为 <code>none</code>；</li>
-<li>semi：语句末尾是否要加分号，默认值true，选择false表示不加；</li>
-</ul>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;useTabs&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">&quot;tabWidth&quot;</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">&quot;printWidth&quot;</span>: <span class="number">80</span>,</span><br><span class="line">  <span class="attr">&quot;singleQuote&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;trailingComma&quot;</span>: <span class="string">&quot;none&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;semi&quot;</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>3.创建.prettierignore忽略文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;dist&#x2F;*</span><br><span class="line">.local</span><br><span class="line">.output.js</span><br><span class="line">&#x2F;node_modules&#x2F;**</span><br><span class="line"></span><br><span class="line">**&#x2F;*.svg</span><br><span class="line">**&#x2F;*.sh</span><br><span class="line"></span><br><span class="line">&#x2F;public&#x2F;*</span><br></pre></td></tr></table></figure>
-
-
-
-<p>4.VSCode需要安装prettier的插件</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsq2acx21rj30ow057mxp.jpg" alt="image-20210722214543454"></p>
-<p>5.测试prettier是否生效</p>
-<ul>
-<li>测试一：在代码中保存代码；</li>
-<li>测试二：配置一次性修改的命令；</li>
-</ul>
-<p>在package.json中配置一个scripts：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;prettier&quot;: &quot;prettier --write .&quot;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="1-3-使用ESLint检测"><a href="#1-3-使用ESLint检测" class="headerlink" title="1.3. 使用ESLint检测"></a>1.3. 使用ESLint检测</h3><p>1.在前面创建项目的时候，我们就选择了ESLint，所以Vue会默认帮助我们配置需要的ESLint环境。</p>
-<p>2.VSCode需要安装ESLint插件：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsq2oq26odj30pw05faaq.jpg" alt="image-20210722215933360"></p>
-<p>3.解决eslint和prettier冲突的问题：</p>
-<p>安装插件：（vue在创建项目时，如果选择prettier，那么这两个插件会自动安装）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i eslint-plugin-prettier eslint-config-prettier -D</span><br></pre></td></tr></table></figure>
-
-<p>添加prettier插件：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">extends: [</span><br><span class="line">  &quot;plugin:vue/vue3-essential&quot;,</span><br><span class="line">  &quot;eslint:recommended&quot;,</span><br><span class="line">  &quot;@vue/typescript/recommended&quot;,</span><br><span class="line">  &quot;@vue/prettier&quot;,</span><br><span class="line">  &quot;@vue/prettier/@typescript-eslint&quot;,</span><br><span class="line">  &#x27;plugin:prettier/recommended&#x27;</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="1-4-git-Husky和eslint"><a href="#1-4-git-Husky和eslint" class="headerlink" title="1.4. git Husky和eslint"></a>1.4. git Husky和eslint</h3><p>虽然我们已经要求项目使用eslint了，但是不能保证组员提交代码之前都将eslint中的问题解决掉了：</p>
-<ul>
-<li><p>也就是我们希望保证代码仓库中的代码都是符合eslint规范的；</p>
-</li>
-<li><p>那么我们需要在组员执行 <code>git commit </code> 命令的时候对其进行校验，如果不符合eslint规范，那么自动通过规范进行修复；</p>
-</li>
-</ul>
-<p>那么如何做到这一点呢？可以通过Husky工具：</p>
-<ul>
-<li>husky是一个git hook工具，可以帮助我们触发git提交的各个阶段：pre-commit、commit-msg、pre-push</li>
-</ul>
-<p>如何使用husky呢？</p>
-<p>这里我们可以使用自动配置命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky-init &amp;&amp; npm install</span><br></pre></td></tr></table></figure>
-
-<p>这里会做三件事：</p>
-<p>1.安装husky相关的依赖：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqq0o5jxmj30bb04qwen.jpg" alt="image-20210723112648927"></p>
-<p>2.在项目目录下创建 <code>.husky</code> 文件夹：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqq16zo75j307703mt8m.jpg" alt="image-20210723112719634"></p>
-<p>3.在package.json中添加一个脚本：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqq26phpxj30dj06fgm3.jpg" alt="image-20210723112817691"></p>
-<p>接下来，我们需要去完成一个操作：在进行commit时，执行lint脚本：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqq3hn229j30nf04z74q.jpg" alt="image-20210723112932943"></p>
-<p>这个时候我们执行git commit的时候会自动对代码进行lint校验。</p>
-<h3 id="1-5-git-commit规范"><a href="#1-5-git-commit规范" class="headerlink" title="1.5. git commit规范"></a>1.5. git commit规范</h3><h4 id="1-5-1-代码提交风格"><a href="#1-5-1-代码提交风格" class="headerlink" title="1.5.1. 代码提交风格"></a>1.5.1. 代码提交风格</h4><p>通常我们的git commit会按照统一的风格来提交，这样可以快速定位每次提交的内容，方便之后对版本进行控制。</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqw17gaqjj30to0cj3zp.jpg"></p>
-<p>但是如果每次手动来编写这些是比较麻烦的事情，我们可以使用一个工具：Commitizen</p>
-<ul>
-<li>Commitizen 是一个帮助我们编写规范 commit message 的工具；</li>
-</ul>
-<p>1.安装Commitizen</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install commitizen -D</span><br></pre></td></tr></table></figure>
-
-<p>2.安装cz-conventional-changelog，并且初始化cz-conventional-changelog：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx commitizen init cz-conventional-changelog --save-dev --save-exact</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会帮助我们安装cz-conventional-changelog：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqvz2odi4j30ek00zmx2.jpg" alt="image-20210723145249096"></p>
-<p>并且在package.json中进行配置：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqvzftay5j30iu04k74d.jpg"></p>
-<p>这个时候我们提交代码需要使用 <code>npx cz</code>：</p>
-<ul>
-<li>第一步是选择type，本次更新的类型</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>feat</td>
-<td>新增特性 (feature)</td>
-</tr>
-<tr>
-<td>fix</td>
-<td>修复 Bug(bug fix)</td>
-</tr>
-<tr>
-<td>docs</td>
-<td>修改文档 (documentation)</td>
-</tr>
-<tr>
-<td>style</td>
-<td>代码格式修改(white-space, formatting, missing semi colons, etc)</td>
-</tr>
-<tr>
-<td>refactor</td>
-<td>代码重构(refactor)</td>
-</tr>
-<tr>
-<td>perf</td>
-<td>改善性能(A code change that improves performance)</td>
-</tr>
-<tr>
-<td>test</td>
-<td>测试(when adding missing tests)</td>
-</tr>
-<tr>
-<td>build</td>
-<td>变更项目构建或外部依赖（例如 scopes: webpack、gulp、npm 等）</td>
-</tr>
-<tr>
-<td>ci</td>
-<td>更改持续集成软件的配置文件和 package 中的 scripts 命令，例如 scopes: Travis, Circle 等</td>
-</tr>
-<tr>
-<td>chore</td>
-<td>变更构建流程或辅助工具(比如更改测试环境)</td>
-</tr>
-<tr>
-<td>revert</td>
-<td>代码回退</td>
-</tr>
-</tbody></table>
-<ul>
-<li>第二步选择本次修改的范围（作用域）</li>
-</ul>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqw8ca15oj30r600wmx4.jpg" alt="image-20210723150147510"></p>
-<ul>
-<li>第三步选择提交的信息</li>
-</ul>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqw8mq3zlj60ni01hmx402.jpg" alt="image-20210723150204780"></p>
-<ul>
-<li>第四步提交详细的描述信息</li>
-</ul>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqw8y05bjj30kt01fjrb.jpg" alt="image-20210723150223287"></p>
-<ul>
-<li>第五步是否是一次重大的更改</li>
-</ul>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqw9z5vbij30bm00q744.jpg" alt="image-20210723150322122"></p>
-<ul>
-<li>第六步是否影响某个open issue</li>
-</ul>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqwar8xp1j30fq00ya9x.jpg" alt="image-20210723150407822"></p>
-<p>我们也可以在scripts中构建一个命令来执行 cz：</p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNgy1gsqwc4gtkxj30e207174t.jpg" alt="image-20210723150526211"></p>
-<h4 id="1-5-2-代码提交验证"><a href="#1-5-2-代码提交验证" class="headerlink" title="1.5.2. 代码提交验证"></a>1.5.2. 代码提交验证</h4><p>如果我们按照cz来规范了提交风格，但是依然有同事通过 <code>git commit</code> 按照不规范的格式提交应该怎么办呢？</p>
-<ul>
-<li>我们可以通过commitlint来限制提交；</li>
-</ul>
-<p>1.安装 @commitlint/config-conventional 和 @commitlint/cli</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i @commitlint/config-conventional @commitlint/cli -D</span><br></pre></td></tr></table></figure>
-
-<p>2.在根目录创建commitlint.config.js文件，配置commitlint</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="keyword">extends</span>: [<span class="string">&#x27;@commitlint/config-conventional&#x27;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>3.使用husky生成commit-msg文件，验证提交信息：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx husky add .husky/commit-msg &quot;npx --no-install commitlint --edit $1&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="二-自己写的CMS后台管理系统"><a href="#二-自己写的CMS后台管理系统" class="headerlink" title="二.自己写的CMS后台管理系统"></a>二.自己写的CMS后台管理系统</h2><p>最近看完 <code>TypeScript + Vue3</code> 开始着手写的一个 CMS 系统练练手，有兴趣可以下载来🏃🏃<a target="_blank" rel="noopener" href="https://github.com/coderx-waper/vue-ts-cms.git">vue-ts-cms</a></p>
+        
+  <a href="/io/io/tags#Vue" >
+    <span class="tag-code">Vue</span>
+  </a>
 
       
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/io/tags/Vue/">Vue</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
+      <div class="article-summary">
+        
+          一. 项目规范的五个步骤在实际项目中，一个项目通常会有多人进行开发维护，多人就会面临着种种不规范的问题，举个例子，在文件中有些同事喜欢使用””，有些同事喜欢使用’’，显然如果没有一个统一的规范整个工程会显得杂乱，不规整。
+那么手动一个个去改动显然也是不太现实的，所以从工程化手段入手来解决此类 ...
+        
+      </div>
+      <a class="more" href="/io/2021/07/26/%E5%A6%82%E4%BD%95%E8%A7%84%E8%8C%83%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAvue%E5%B7%A5%E7%A8%8B%E9%A1%B9%E7%9B%AE/">Read more</a>
+    </article>
   
-    
-    <h3 class="article-title"><a href="/io/2021/06/18/Vue.js 官网 结论的一处的错误/"><span>执行 setup 时，组件实例真的如官方所说未创建？</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/io/2021/06/18/Vue.js 官网 结论的一处的错误/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-06-18T09:29:53.000Z">
-          2021-06-18
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/io/2021/06/18/Vue.js%20%E5%AE%98%E7%BD%91%20%E7%BB%93%E8%AE%BA%E7%9A%84%E4%B8%80%E5%A4%84%E7%9A%84%E9%94%99%E8%AF%AF/">执行 setup 时，组件实例真的如官方所说未创建？</a>
+      </h2>
+      <p class="article-date">June 18, 2021</p>
       
-        <h2 id="Vue-js-官网-结论的一处的错误"><a href="#Vue-js-官网-结论的一处的错误" class="headerlink" title="Vue.js 官网 结论的一处的错误"></a>Vue.js 官网 结论的一处的错误</h2><h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><blockquote>
-<p>为什么说是对Vue.js官网一处结论描述错误的探究呢？主要是在学习 Composition API 的 <code>setup()</code>函数发现官网有一段这样的模式</p>
-<p><code>When</code>setup<code> is executed, the component instance has not been created yet. As a result, you will only be able to access the following properties:</code> </p>
-<p>其含义就是：执行 <code>setup</code> 时，组件实例尚未被创建。因此，你只能访问以下 property，下图就是官方对此的描述，真实情况如其所说吗？</p>
-</blockquote>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/88d7a049391d4e548bb5ba5876a055e3~tplv-k3u1fbpfcp-watermark.image" alt="截屏2021-06-18 下午4.30.39.png"></p>
-<h4 id="二、验证这个错误"><a href="#二、验证这个错误" class="headerlink" title="二、验证这个错误"></a>二、验证这个错误</h4><p>正所谓了解真相，方能自由。探索这个问题的对错必须依赖 Vue3源码</p>
-<ul>
-<li>下载 vue-next 源码</li>
-</ul>
-<p>在整个源码中核心文件：<code> runtime-core</code>、<code> runtime-dom</code>、<code> compiler-core</code>、<code> runtime-dom</code> 几个文件</p>
-<ul>
-<li>进入到 runtime-core 文件夹</li>
-<li>打开 <code>renderer.ts</code>文件</li>
-</ul>
-<p>我们可以从544行中的这段代码开始一步步分析</p>
-<h5 id="2-1-处理组件节点，调用-processComponent"><a href="#2-1-处理组件节点，调用-processComponent" class="headerlink" title="2.1 处理组件节点，调用 processComponent"></a>2.1 处理组件节点，调用 <code>processComponent</code></h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (shapeFlag &amp; ShapeFlags.COMPONENT) &#123;          </span><br><span class="line">  <span class="comment">// 处理组件节点</span></span><br><span class="line">  processComponent(</span><br><span class="line">    n1,</span><br><span class="line">    n2,</span><br><span class="line">    container,</span><br><span class="line">    anchor,</span><br><span class="line">    parentComponent,</span><br><span class="line">    parentSuspense,</span><br><span class="line">    isSVG,</span><br><span class="line">    slotScopeIds,</span><br><span class="line">    optimized</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里我们来看看 <code> processComponent</code> 的实现中很明显 已经创建了 <code> instance</code> 这么个实例, 接着在1335行中开始调用 <code> setupComponent(instance)</code> 将 上面创建的<code> instance</code> 传递了出去</p>
-<h5 id="2-2-组件挂载，调用-mountComponent"><a href="#2-2-组件挂载，调用-mountComponent" class="headerlink" title="2.2 组件挂载，调用 mountComponent"></a>2.2 组件挂载，调用 <code>mountComponent</code></h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">// 组件挂载</span></span><br><span class="line"><span class="keyword">const</span> mountComponent: MountComponentFn = (</span><br><span class="line">  initialVNode,</span><br><span class="line">  container, </span><br><span class="line">  anchor,</span><br><span class="line">  parentComponent,</span><br><span class="line">  parentSuspense,</span><br><span class="line">  isSVG,</span><br><span class="line">  optimized</span><br><span class="line">) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 2.x compat may pre-creaate the component instance before actually</span></span><br><span class="line">  <span class="comment">// mounting</span></span><br><span class="line">  <span class="keyword">const</span> compatMountInstance = __COMPAT__ &amp;&amp; initialVNode.component</span><br><span class="line">  <span class="comment">// 在这里创建了 ComponentInternalInstance </span></span><br><span class="line">  <span class="keyword">const</span> instance: ComponentInternalInstance =</span><br><span class="line">  compatMountInstance ||</span><br><span class="line">    (initialVNode.component = createComponentInstance(</span><br><span class="line">    initialVNode,</span><br><span class="line">    parentComponent,</span><br><span class="line">    parentSuspense</span><br><span class="line">  ))</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-2-开始处理-setupComponent"><a href="#2-2-开始处理-setupComponent" class="headerlink" title="2.2 开始处理 setupComponent"></a>2.2 开始处理 <code>setupComponent</code></h5><p>该函数在 <code>component.ts</code>中进行了处理，那么它又是如何处理呢？</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">) =&gt; &#123;</span><br><span class="line"> <span class="comment">// 2.x compat may pre-creaate the component instance before actually</span></span><br><span class="line"> <span class="comment">// mounting</span></span><br><span class="line"> <span class="keyword">const</span> compatMountInstance = __COMPAT__ &amp;&amp; initialVNode.component</span><br><span class="line"> <span class="keyword">const</span> instance: ComponentInternalInstance =</span><br><span class="line">   compatMountInstance ||(initialVNode.component = createComponentInstance(</span><br><span class="line">   initialVNode,</span><br><span class="line">   parentComponent,</span><br><span class="line">   parentSuspense</span><br><span class="line">    ))</span><br><span class="line">  <span class="keyword">if</span> (__DEV__ &amp;&amp; instance.type.__hmrId) &#123;</span><br><span class="line">    registerHMR(instance)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (__DEV__) &#123;</span><br><span class="line">    pushWarningContext(initialVNode)</span><br><span class="line">    startMeasure(instance, <span class="string">`mount`</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// inject renderer internals for keepAlive</span></span><br><span class="line">  <span class="keyword">if</span> (isKeepAlive(initialVNode)) &#123;</span><br><span class="line">    ;(instance.ctx <span class="keyword">as</span> KeepAliveContext).renderer = internals</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// resolve props and slots for setup context</span></span><br><span class="line">   <span class="keyword">if</span> (!(__COMPAT__ &amp;&amp; compatMountInstance)) &#123;</span><br><span class="line">   <span class="keyword">if</span> (__DEV__) &#123;</span><br><span class="line">     startMeasure(instance, <span class="string">`init`</span>)</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">// 开始调用 setup,将 instance 实例传递进入</span></span><br><span class="line">   setupComponent(instance)</span><br><span class="line">    <span class="keyword">if</span> (__DEV__) &#123;</span><br><span class="line">      endMeasure(instance, <span class="string">`init`</span>)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>调转到它的实现文件中，我们可以看到这样一段代码实现，在这个函数中处理几件事情</p>
-<ul>
-<li>调用 <code>setupStatefulComponent</code> 初始化有状态的组件</li>
-<li>初始化<code> props</code> 、 <code> slots</code></li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">setupComponent</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  instance: ComponentInternalInstance,</span></span></span><br><span class="line"><span class="function"><span class="params">  isSSR = <span class="literal">false</span></span></span></span><br><span class="line"><span class="function"><span class="params"></span>) </span>&#123;</span><br><span class="line">  isInSSRComponentSetup = isSSR</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> &#123; props, children &#125; = instance.vnode</span><br><span class="line">  <span class="keyword">const</span> isStateful = isStatefulComponent(instance)</span><br><span class="line">  initProps(instance, props, isStateful, isSSR)</span><br><span class="line">  initSlots(instance, children)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> setupResult = isStateful</span><br><span class="line">    ? setupStatefulComponent(instance, isSSR)</span><br><span class="line">    : <span class="literal">undefined</span></span><br><span class="line">  isInSSRComponentSetup = <span class="literal">false</span></span><br><span class="line">  <span class="keyword">return</span> setupResult</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-3-提取-setup函数"><a href="#2-3-提取-setup函数" class="headerlink" title="2.3 提取  setup函数"></a>2.3 提取 <code> setup</code>函数</h5><p>在这里通过 <code>const &#123; setup &#125; = Component</code>拿到 该函数，看到这段代码也就能得出一个结论</p>
-<ul>
-<li>如果实现了 setup函数，那么通过vue2 options api 是不会生效的</li>
-<li>vue3是兼容 vue2  options api</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2. call setup()</span></span><br><span class="line"><span class="comment">// 在这里开始处理 setup()函数</span></span><br><span class="line"><span class="keyword">const</span> &#123; setup &#125; = Component</span><br><span class="line"><span class="keyword">if</span> (setup) &#123;</span><br><span class="line">  <span class="keyword">const</span> setupContext = (instance.setupContext =</span><br><span class="line">  setup.length &gt; <span class="number">1</span> ? createSetupContext(instance) : <span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line">  currentInstance = instance</span><br><span class="line">  pauseTracking()</span><br><span class="line">  <span class="keyword">const</span> setupResult = callWithErrorHandling(</span><br><span class="line">    setup,</span><br><span class="line">    instance,</span><br><span class="line">    ErrorCodes.SETUP_FUNCTION,</span><br><span class="line">    [__DEV__ ? shallowReadonly(instance.props) : instance.props, setupContext]</span><br><span class="line">  )</span><br><span class="line">  resetTracking()</span><br><span class="line">  currentInstance = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (isPromise(setupResult)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (isSSR) &#123;</span><br><span class="line">      <span class="comment">// return the promise so server-renderer can wait on it</span></span><br><span class="line">    <span class="keyword">return</span> setupResult</span><br><span class="line">    .then(<span class="function">(<span class="params">resolvedResult: unknown</span>) =&gt;</span> &#123;</span><br><span class="line">       handleSetupResult(instance, resolvedResult, isSSR)</span><br><span class="line">      &#125;)</span><br><span class="line">     .catch(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">       handleError(e, instance, ErrorCodes.SETUP_FUNCTION)</span><br><span class="line">      &#125;)</span><br><span class="line">   &#125; <span class="keyword">else</span> <span class="keyword">if</span> (__FEATURE_SUSPENSE__) &#123;</span><br><span class="line">      <span class="comment">// async setup returned Promise.</span></span><br><span class="line">      <span class="comment">// bail here and wait for re-entry.</span></span><br><span class="line">      instance.asyncDep = setupResult</span><br><span class="line">   &#125; <span class="keyword">else</span> <span class="keyword">if</span> (__DEV__) &#123;</span><br><span class="line">      warn(</span><br><span class="line">          <span class="string">`setup() returned a Promise, but the version of Vue you are using `</span> +</span><br><span class="line">            <span class="string">`does not support it yet.`</span></span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">     handleSetupResult(instance, setupResult, isSSR)</span><br><span class="line">  &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    finishComponentSetup(instance, isSSR) </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-4-统一执行-callWithErrorHandling-函数"><a href="#2-4-统一执行-callWithErrorHandling-函数" class="headerlink" title="2.4 统一执行  callWithErrorHandling 函数"></a>2.4 统一执行 <code> callWithErrorHandling</code> 函数</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">callWithErrorHandling</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  fn: <span class="built_in">Function</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">  instance: ComponentInternalInstance | <span class="literal">null</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">  type: ErrorTypes,</span></span></span><br><span class="line"><span class="function"><span class="params">  args?: unknown[]</span></span></span><br><span class="line"><span class="function"><span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> res</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    res = args ? fn(...args) : fn()</span><br><span class="line">  &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">    handleError(err, instance, type)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个函数其实本质就是自己封装了一个 try catch ，在其内部来来调 fn</p>
-<h3 id="三、结论"><a href="#三、结论" class="headerlink" title="三、结论"></a>三、结论</h3><ul>
-<li>结合源码一分析，就很确定 执行 <code>setup</code> 时，组件实例 <code>已经创建</code>，官方描述是有问题的~</li>
-</ul>
+        
+  <a href="/io/io/tags#Vue" >
+    <span class="tag-code">Vue</span>
+  </a>
 
       
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/io/tags/Vue/">Vue</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
+      <div class="article-summary">
+        
+          Vue.js 官网 结论的一处的错误一、前言
+为什么说是对Vue.js官网一处结论描述错误的探究呢？主要是在学习 Composition API 的 setup()函数发现官网有一段这样的模式
+Whensetup is executed, the component instance has ...
+        
+      </div>
+      <a class="more" href="/io/2021/06/18/Vue.js%20%E5%AE%98%E7%BD%91%20%E7%BB%93%E8%AE%BA%E7%9A%84%E4%B8%80%E5%A4%84%E7%9A%84%E9%94%99%E8%AF%AF/">Read more</a>
+    </article>
   
-    
-    <h3 class="article-title"><a href="/io/2021/06/18/Mixin合并规则/"><span>Mixin合并规则</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/io/2021/06/18/Mixin合并规则/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-06-18T02:41:53.000Z">
-          2021-06-18
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/io/2021/06/18/Mixin%E5%90%88%E5%B9%B6%E8%A7%84%E5%88%99/">Mixin合并规则</a>
+      </h2>
+      <p class="article-date">June 18, 2021</p>
       
-        <h2 id="Mixin合并规则"><a href="#Mixin合并规则" class="headerlink" title="Mixin合并规则"></a>Mixin合并规则</h2><h3 id="Mixin-是什么？"><a href="#Mixin-是什么？" class="headerlink" title="Mixin 是什么？"></a>Mixin 是什么？</h3><ul>
-<li><p>官方定义 ：</p>
-<p>Mixin 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能。一个 mixin 对象可以包含任意组件选项。当组件使用 mixin 对象时，所有 mixin 对象的选项将被“混合”进入该组件本身的选项。</p>
-</li>
-</ul>
-<h3 id="选项合并规则？"><a href="#选项合并规则？" class="headerlink" title="选项合并规则？"></a>选项合并规则？</h3><p>探索后总结出三个点</p>
-<h4 id="一、data函数返回值对象"><a href="#一、data函数返回值对象" class="headerlink" title="一、data函数返回值对象"></a>一、data函数返回值对象</h4><ul>
-<li>默认情况下会进行合并</li>
-<li>返回值对象如果存在冲突，会以组件自身的数据为优先</li>
-</ul>
-<p>代码佐证：</p>
-<p>在 Mixin 对象中定义了 Message 属性，在 App.vue 中也定义了 Message 属性</p>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/de2c3ace22bb42529af2aa62af37f6b4~tplv-k3u1fbpfcp-watermark.image" alt="darcula-4x.png"></p>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a513e872f4f043e8b087671c55d743e8~tplv-k3u1fbpfcp-watermark.image" alt="darcula-4x (1).png"></p>
-<p>结果不出意料的会显示 <code> Node.js是世界上最好的语言</code> </p>
-<h4 id="二、生命周期钩子函数"><a href="#二、生命周期钩子函数" class="headerlink" title="二、生命周期钩子函数"></a>二、生命周期钩子函数</h4><ul>
-<li>钩子函数会被合并到数组中，在合适的时机都会被调用</li>
-</ul>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7a305c624f240fb8242c2c9b53a3e7c~tplv-k3u1fbpfcp-watermark.image" alt="钩子函数.png"></p>
-<p>通过代码执行结果也是验证了这个结论，有兴趣可以读vue-next源码，它里面本质就是这样做的。</p>
-<h4 id="三、对象类型"><a href="#三、对象类型" class="headerlink" title="三、对象类型"></a>三、对象类型</h4><ul>
-<li>如果都有methods选项且定义了实现，那么都会生效</li>
-<li>如果对象的key相同，则只会取组件对象的键值对</li>
-</ul>
+        
+  <a href="/io/io/tags#Vue" >
+    <span class="tag-code">Vue</span>
+  </a>
 
       
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/io/tags/Vue/">Vue</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
+      <div class="article-summary">
+        
+          Mixin合并规则Mixin 是什么？
+官方定义 ：
+Mixin 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能。一个 mixin 对象可以包含任意组件选项。当组件使用 mixin 对象时，所有 mixin 对象的选项将被“混合”进入该组件本身的选项。
 
 
-
-  <article>
-
+选项合并规则？探索后 ...
+        
+      </div>
+      <a class="more" href="/io/2021/06/18/Mixin%E5%90%88%E5%B9%B6%E8%A7%84%E5%88%99/">Read more</a>
+    </article>
   
-    
-    <h3 class="article-title"><a href="/io/2021/05/24/邂逅 woker/"><span>邂逅CLI开发-woker开发过程</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/io/2021/05/24/邂逅 woker/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-05-24T07:55:53.000Z">
-          2021-05-24
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/io/2021/05/24/%E9%82%82%E9%80%85%20woker/">邂逅CLI开发-woker开发过程</a>
+      </h2>
+      <p class="article-date">May 24, 2021</p>
       
-        <h2 id="邂逅CLI开发-woker开发过程"><a href="#邂逅CLI开发-woker开发过程" class="headerlink" title="邂逅CLI开发-woker开发过程"></a>邂逅CLI开发-woker开发过程</h2><p>在前端开发过程中，我们会使用各种各样的脚手架 vue-cli、create-react-app等工具。</p>
-<p>这些工具是怎么开发出来的？当我们输入一个命令其内部帮我们处理了哪些事情？</p>
-<p>最近写了一个叫 woker 的小工具，记录下其开发过程。文档会分成两部分</p>
-<blockquote>
-<p>CLI 脚手架开发过程； </p>
-</blockquote>
-<blockquote>
-<p>woker 使用介绍；</p>
-<blockquote>
-<p>Vue 项目模板：<a target="_blank" rel="noopener" href="https://github.com/coderx-waper/z-vue-template">https://github.com/coderx-waper/z-vue-template</a></p>
-<p>脚手架地址：<a target="_blank" rel="noopener" href="https://github.com/coderx-waper/woker">https://github.com/coderx-waper/woker</a> </p>
-</blockquote>
-</blockquote>
-<p>如对你有帮助，欢迎一键三联~ 点个 star 还是要 求一下的😬 </p>
-<hr>
-<h3 id="开发过程"><a href="#开发过程" class="headerlink" title="开发过程"></a>开发过程</h3><h4 id="一、项目开始"><a href="#一、项目开始" class="headerlink" title="一、项目开始"></a>一、项目开始</h4><ul>
-<li><p>创建空文件夹 作为我们项目的存放位置 </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例如：cd woker</span><br></pre></td></tr></table></figure></li>
-<li><p>创建 package.json文件</p>
-<p>在终端执行<code>  npm init -y</code> ，即可生成  package.json 文件</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;woker&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.1&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;vue-cli&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;bin&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;woker&quot;</span>: <span class="string">&quot;index.js&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;keywords&quot;</span>: [<span class="string">&quot;vue-cli&quot;</span>,<span class="string">&quot;coderz&quot;</span>,<span class="string">&quot;vue&quot;</span>,<span class="string">&quot;woker&quot;</span>],</span><br><span class="line">  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;coderz&quot;</span>, </span><br><span class="line">  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span>,</span><br><span class="line">  <span class="string">&quot;homepage&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span>,</span><br><span class="line">  <span class="string">&quot;repository&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;type&quot;</span>: <span class="string">&quot;git&quot;</span>,</span><br><span class="line">    <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;commander&quot;</span>: <span class="string">&quot;^7.2.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;download-git-repo&quot;</span>: <span class="string">&quot;^3.0.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;ejs&quot;</span>: <span class="string">&quot;^3.1.6&quot;</span>,</span><br><span class="line">    <span class="string">&quot;inquirer&quot;</span>: <span class="string">&quot;^8.0.0&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li><p>配置文件夹</p>
-<p>最终 woker 项目中文件目录结构</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">├── lib</span><br><span class="line">| ├── config <span class="comment">// 配置文件</span></span><br><span class="line">│ │   └── repo_config.js</span><br><span class="line">| ├── core <span class="comment">// 核心文件</span></span><br><span class="line">│ │   ├── react <span class="comment">// 待增加... </span></span><br><span class="line">│ │   ├── vue</span><br><span class="line">│ │   ├── └── action.js</span><br><span class="line">│ │   ├── └── create.js </span><br><span class="line">│ │   ├── └── help.js</span><br><span class="line">| ├── templates <span class="comment">// ejs 模板文件</span></span><br><span class="line">│ │   └── vue-component.ejs</span><br><span class="line">│ │   └── vue-router.ejs</span><br><span class="line">│ │   └── vue-store.ejs</span><br><span class="line">│ │   └── vue-types.ejs</span><br><span class="line">| ├── untils <span class="comment">// </span></span><br><span class="line">│ │   └── terminal.js</span><br><span class="line">│ │   └── utils.js</span><br><span class="line">├── index.js</span><br><span class="line">├── package-lock.json</span><br><span class="line">├── package.json</span><br><span class="line">├── README.md</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="二、创建命令"><a href="#二、创建命令" class="headerlink" title="二、创建命令"></a>二、创建命令</h4><p>必须注意一点 ，这段代码必须放在 index.js 文件的最上面</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env node</span></span><br></pre></td></tr></table></figure>
-
-<p>修改 package.json 文件</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;bin&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;woker&quot;</span>: <span class="string">&quot;index.js&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>执行 <code> npm link</code>   woker 才会生效</p>
-<p>创建命令需要借助<code> commander</code> 库来实现，用法可自行参考官网<a target="_blank" rel="noopener" href="https://github.com/tj/commander.js/blob/HEAD/Readme_zh-CN.md"><code> commander</code></a></p>
-<h4 id="三、创建项目指令"><a href="#三、创建项目指令" class="headerlink" title="三、创建项目指令"></a>三、创建项目指令</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">program.command(<span class="string">&#x27;create &lt;project&gt; [others...]&#x27;</span>)</span><br><span class="line">        .description(<span class="string">&#x27;clone repo into a folder&#x27;</span>)</span><br><span class="line">        .action(createVueProjectAction)</span><br></pre></td></tr></table></figure>
-
-<p><code>createVueProjectAction</code> 是封装在 action.js 文件中的一个动作，在action中的创建过程：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// create a vue template action</span></span><br><span class="line"><span class="keyword">const</span> createVueProjectAction = <span class="keyword">async</span> (project, others) =&gt; &#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(project, others)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 1 clone project</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;coderz helps you clone a vue template, this requires a budget...&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> download(vuerepo, project, &#123;</span><br><span class="line">        clone: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2 npm install</span></span><br><span class="line">    <span class="keyword">const</span> commandTerminal = process.platform === <span class="string">&#x27;win32&#x27;</span> ? <span class="string">&#x27;npm.cmd&#x27;</span> : <span class="string">&#x27;npm&#x27;</span></span><br><span class="line">    <span class="keyword">await</span> commandSpawn(commandTerminal, [<span class="string">&#x27;install&#x27;</span>], &#123;</span><br><span class="line">        cwd: <span class="string">`./<span class="subst">$&#123;project&#125;</span>`</span></span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// 3 run serve</span></span><br><span class="line">    commandSpawn(commandTerminal, [<span class="string">&#x27;run&#x27;</span>, <span class="string">&#x27;serve&#x27;</span>], &#123;</span><br><span class="line">        cwd: <span class="string">`./<span class="subst">$&#123;project&#125;</span>`</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4 z-vue-template install it --open </span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里涉及几个几个问题：</p>
-<ul>
-<li>download ：可以进行 clone 的一个第三方库<code> download-git-repo</code>  可自行在 npm 中查看其用法</li>
-<li>commandSpawn：执行终端命令的函数 可在 terminal.js 文件中找到其实现方法</li>
-<li>vuerepo：vue-template 模板地址，封装在 lib/config/repo-config.js 中，后续考虑可自定义模板地址，目前使用自己写的  <code> z-vue-template</code></li>
-</ul>
-<h4 id="四、添加组件指令"><a href="#四、添加组件指令" class="headerlink" title="四、添加组件指令"></a>四、添加组件指令</h4><p>添加指令</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">program.command(<span class="string">&#x27;addcpn &lt;name&gt;&#x27;</span>)</span><br><span class="line">        .description(<span class="string">&#x27;add vue component, eg: addcpn NavBar [-d src/components]&#x27;</span>)</span><br><span class="line">        .action(<span class="function">(<span class="params">name</span>) =&gt;</span> &#123;</span><br><span class="line">            addComponentAction(name, program.dest || <span class="string">&#x27;src/components&#x27;</span>)</span><br><span class="line">        &#125;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>addComponentAction 逻辑</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// create component action</span></span><br><span class="line"><span class="keyword">const</span> addComponentAction = <span class="keyword">async</span> (name, dest) =&gt; &#123;</span><br><span class="line">    <span class="comment">// needs ejs template -&gt;  .vue </span></span><br><span class="line">    <span class="keyword">const</span> result = <span class="keyword">await</span> compile(<span class="string">&#x27;vue-component.ejs&#x27;</span>, &#123;</span><br><span class="line">        name,</span><br><span class="line">        lowerName: name.toLowerCase()</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="comment">// write to source folder</span></span><br><span class="line">    <span class="keyword">const</span> targetPath = path.resolve(dest || <span class="string">&#x27;src/components&#x27;</span>, <span class="string">`<span class="subst">$&#123;name&#125;</span>.vue`</span>)</span><br><span class="line">    writeFile(targetPath, result)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里面存在一个问题即创建当文件夹不存的时，创建会出错，故而在调用 writeFile 中进行了文件夹的递归调用根据targetPath创建对应文件夹，其中的实现逻辑：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mkdirSync = <span class="function">(<span class="params">dirname</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (fs.existsSync(dirname)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 不存在,判断上一级文件夹是否存在？</span></span><br><span class="line">        <span class="keyword">if</span> (mkdirSync(path.dirname(dirname))) &#123;</span><br><span class="line">            <span class="comment">// 存在父文件，就直接新建该文件</span></span><br><span class="line">            fs.mkdirSync(dirname)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>添加组件需要去了解<code> ejs</code>用法，项目中已经根据需要提前写好了<code>vue-component.ejs</code>模板</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;&lt;%= data.lowerName %&gt;&quot;</span>&gt;</span><br><span class="line">    &lt;h2&gt;&#123;&#123; message &#125;&#125;&lt;/h2&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    name: <span class="string">&quot;&lt;%= data.name %&gt;&quot;</span>,</span><br><span class="line">    components: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    mixins: [],</span><br><span class="line">    props: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    data: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">        message: <span class="string">&quot;Hello &lt;%= data.name %&gt;&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    created: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">  .&lt;%= data.lowerName %&gt; &#123;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
-<p>模板ejs 编译核心：需要使用到 <code>ejs</code> 库</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**编译文件 */</span></span><br><span class="line"><span class="keyword">const</span> compile = <span class="function">(<span class="params">template, data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 获取 路径</span></span><br><span class="line">    <span class="keyword">const</span> temp = <span class="string">`../templates/<span class="subst">$&#123;template&#125;</span>`</span></span><br><span class="line">    <span class="keyword">const</span> temPath = path.resolve(__dirname, temp)</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        ejs.renderFile(temPath, &#123;</span><br><span class="line">            data</span><br><span class="line">        &#125;, &#123;&#125;, <span class="function">(<span class="params">err, result</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                reject(err)</span><br><span class="line">            &#125;</span><br><span class="line">            resolve(result)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="五-、添加其他指令"><a href="#五-、添加其他指令" class="headerlink" title="五 、添加其他指令"></a>五 、添加其他指令</h4><p>添加 page指令和 store 指令同上，逻辑可以查看 woker 中的实现。这里不再累述。</p>
-<h4 id="六、发布到npm"><a href="#六、发布到npm" class="headerlink" title="六、发布到npm"></a>六、发布到npm</h4><p>在发布之前，所有指令必须测试无问题</p>
-<p>修改package.json：添加 homepage、repository</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;homepage&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span>, <span class="comment">//此处填写你的 homepage</span></span><br><span class="line"><span class="string">&quot;repository&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;type&quot;</span>: <span class="string">&quot;git&quot;</span>,</span><br><span class="line">  <span class="string">&quot;url&quot;</span>: <span class="string">&quot;https://github.com/coderx-waper/woker.git&quot;</span> <span class="comment">//此处填写你的 repository</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>在命令行中登录：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm login <span class="comment">//根据提示输入信息即可</span></span><br></pre></td></tr></table></figure>
-
-<p>发布到npm registry中</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="woker使用介绍"><a href="#woker使用介绍" class="headerlink" title="woker使用介绍"></a>woker使用介绍</h2><ul>
-<li><p>woker 是什么？</p>
-<p>Front-end scaffolding, currently supports vue</p>
-</li>
-<li><p>后续打算？</p>
-<p> 支持 支持 react template</p>
-</li>
-</ul>
-<p>如何安装？</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g woker</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><p>目前<code>woker</code>仅支持vue，cli已经帮你配置了</p>
-<ul>
-<li>常用的目录结构</li>
-<li>axios </li>
-<li>vue-router</li>
-<li>vuex</li>
-<li>vue.config.js<br>创建项目</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">woker create &lt;project&gt;[^project]: 你的项目名称 例如： woker create demo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>自动拉取z-vue-template项目模板，自动打开 <code>http://localhost:8080/</code>、启动项目</p>
-<h3 id="创建组件"><a href="#创建组件" class="headerlink" title="创建组件"></a>创建组件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">woker addcpn &lt;component&gt;[^component]: 你的组件名称 例如： woker addcpn HelloWold</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h3><p>创建页面过程中会自动配置路由</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">woker addpage &lt;profile&gt;[^profile]: 你的页面名称 例如： woker addpage profile</span><br></pre></td></tr></table></figure>
-
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
-      
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/io/tags/NodeJs/">NodeJs</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
-  
-    
-    <h3 class="article-title"><a href="/io/2021/05/21/nodejs-express/"><span>express</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/io/2021/05/21/nodejs-express/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-05-21T03:30:00.000Z">
-          2021-05-21
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
-      
-        <h1 id="express"><a href="#express" class="headerlink" title="express"></a>express</h1><p>本节一起来探究node中常用的<code>express</code>核心中的5个问题</p>
-<h3 id="1-调用-express-到底创建了什么❓"><a href="#1-调用-express-到底创建了什么❓" class="headerlink" title="1. 调用 express() 到底创建了什么❓"></a>1. 调用 express() 到底创建了什么❓</h3><p>打开express core的 lib/express.js 会发现有这么一段代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span> = <span class="built_in">module</span>.exports = createApplication;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createApplication</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> app = <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">    app.handle(req, res, next);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  mixin(app, EventEmitter.prototype, <span class="literal">false</span>);</span><br><span class="line">  mixin(app, proto, <span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// expose the prototype that will get set on requests</span></span><br><span class="line">  app.request = <span class="built_in">Object</span>.create(req, &#123;</span><br><span class="line">    app: &#123; <span class="attr">configurable</span>: <span class="literal">true</span>, <span class="attr">enumerable</span>: <span class="literal">true</span>, <span class="attr">writable</span>: <span class="literal">true</span>, <span class="attr">value</span>: app &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// expose the prototype that will get set on responses</span></span><br><span class="line">  app.response = <span class="built_in">Object</span>.create(res, &#123;</span><br><span class="line">    app: &#123; <span class="attr">configurable</span>: <span class="literal">true</span>, <span class="attr">enumerable</span>: <span class="literal">true</span>, <span class="attr">writable</span>: <span class="literal">true</span>, <span class="attr">value</span>: app &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  app.init();</span><br><span class="line">  <span class="keyword">return</span> app;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>很明显在调用 express()本质是执行了一段 <code>createApplication</code> 函数</p>
-<h3 id="2-app-listen-做了哪些事情❓"><a href="#2-app-listen-做了哪些事情❓" class="headerlink" title="2. app.listen()做了哪些事情❓"></a>2. app.listen()做了哪些事情❓</h3><p>这里你可能会有两个疑问：</p>
-<h4 id="2-1-app不是一个函数吗❓为什么可以去调用-listen"><a href="#2-1-app不是一个函数吗❓为什么可以去调用-listen" class="headerlink" title="2.1 app不是一个函数吗❓为什么可以去调用 listen"></a>2.1 app不是一个函数吗❓为什么可以去调用 <code>listen</code></h4><p>app虽然是一个函数，其实也是一个对象，故而可以去调用 listen</p>
-<h4 id="2-2-在createApplication中并没有发现app中有listen函数"><a href="#2-2-在createApplication中并没有发现app中有listen函数" class="headerlink" title="2.2 在createApplication中并没有发现app中有listen函数"></a>2.2 在createApplication中并没有发现app中有listen函数</h4><p>app可以直接调用listen 这里有一段很重要的处理即：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mixin(app, proto, <span class="literal">false</span>); <span class="comment">//底层做了混入处理</span></span><br></pre></td></tr></table></figure>
-<p><code>proto</code> 本质是 application，在 application.js中其本质就是调用了  http.createServer(this).listen 把参数全部传递了过来;<br>依据：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.listen = <span class="function"><span class="keyword">function</span> <span class="title">listen</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> server = http.createServer(<span class="built_in">this</span>);</span><br><span class="line">  <span class="keyword">return</span> server.listen.apply(server, <span class="built_in">arguments</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-app-use-中间件-内部发生了什么❓"><a href="#3-app-use-中间件-内部发生了什么❓" class="headerlink" title="3. app.use(中间件)内部发生了什么❓"></a>3. app.use(中间件)内部发生了什么❓</h3><p>open application.js 在 app.use = function use() 函数中生成了一个全局路由 router，在 <code>var fns = flatten(slice.call(arguments, offset))</code> 做了扁平处理，将所有函数赋值给了 fns，接着通过 fns.forEach()取出每一个函数在228行本质调用了 router.use()函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line">router.use(path, <span class="function"><span class="keyword">function</span> <span class="title">mounted_app</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> orig = req.app;</span><br><span class="line">      fn.handle(req, res, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">        setPrototypeOf(req, orig.request)</span><br><span class="line">        setPrototypeOf(res, orig.response)</span><br><span class="line">        next(err);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="string">``</span><span class="string">``</span></span><br><span class="line">跳到lib/router/index.js你的疑问即可揭晓。在其底层proto.use = <span class="function"><span class="keyword">function</span> <span class="title">use</span>(<span class="params">fn</span>)中 其实是` <span class="title">new</span> <span class="title">Layer</span>(<span class="params"></span>)` ，然后将生成的图层 <span class="title">layer</span> <span class="title">push</span>到了 <span class="title">stack</span>中，那么这个 <span class="title">stack</span>就是初期绑定到<span class="title">router</span>原型上的一个 <span class="title">stack</span>数组，<span class="title">layer</span>中我们的回调函数，`<span class="title">this</span>.<span class="title">stack</span>.<span class="title">push</span>(<span class="params">layer</span>)`这里的 <span class="title">this</span>本质就是<span class="title">router</span>对象。</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">### 4. 用户发送了请求，中间件是怎么被回调的❓</span></span><br><span class="line"><span class="function">当一个请求过来后，底层本质是处理了 <span class="title">router</span>中的<span class="title">handle</span>函数 `<span class="title">router</span>.<span class="title">handle</span>(<span class="params">req, res, done</span>)</span>;<span class="string">` 在 `</span>proto.handle()<span class="string">` 函数中 通过self.stack拿到我们的 stack，第一次主动调用 next() 核心函数：</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line">  <span class="comment">// idx = 0 ; // init </span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">next</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> layerError = err === <span class="string">&#x27;route&#x27;</span></span><br><span class="line">      ? <span class="literal">null</span></span><br><span class="line">      : err;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// remove added slash</span></span><br><span class="line">    <span class="keyword">if</span> (slashAdded) &#123;</span><br><span class="line">      req.url = req.url.substr(<span class="number">1</span>);</span><br><span class="line">      slashAdded = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// restore altered req.url</span></span><br><span class="line">    <span class="keyword">if</span> (removed.length !== <span class="number">0</span>) &#123;</span><br><span class="line">      req.baseUrl = parentUrl;</span><br><span class="line">      req.url = protohost + removed + req.url.substr(protohost.length);</span><br><span class="line">      removed = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// signal to exit router</span></span><br><span class="line">    <span class="keyword">if</span> (layerError === <span class="string">&#x27;router&#x27;</span>) &#123;</span><br><span class="line">      setImmediate(done, <span class="literal">null</span>)</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// no more matching layers</span></span><br><span class="line">    <span class="keyword">if</span> (idx &gt;= stack.length) &#123;</span><br><span class="line">      setImmediate(done, layerError);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// get pathname of request</span></span><br><span class="line">    <span class="keyword">var</span> path = getPathname(req);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (path == <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> done(layerError);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// find next matching layer</span></span><br><span class="line">    <span class="keyword">var</span> layer;</span><br><span class="line">    <span class="keyword">var</span> match;</span><br><span class="line">    <span class="keyword">var</span> route;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (match !== <span class="literal">true</span> &amp;&amp; idx &lt; stack.length) &#123;</span><br><span class="line">      layer = stack[idx++];</span><br><span class="line">      match = matchLayer(layer, path);</span><br><span class="line">      route = layer.route;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> match !== <span class="string">&#x27;boolean&#x27;</span>) &#123;</span><br><span class="line">        <span class="comment">// hold on to layerError</span></span><br><span class="line">        layerError = layerError || match;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (match !== <span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (!route) &#123;</span><br><span class="line">        <span class="comment">// process non-route handlers normally</span></span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (layerError) &#123;</span><br><span class="line">        <span class="comment">// routes do not match with a pending error</span></span><br><span class="line">        match = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> method = req.method;</span><br><span class="line">      <span class="keyword">var</span> has_method = route._handles_method(method);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// build up automatic options response</span></span><br><span class="line">      <span class="keyword">if</span> (!has_method &amp;&amp; method === <span class="string">&#x27;OPTIONS&#x27;</span>) &#123;</span><br><span class="line">        appendMethods(options, route._options());</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// don&#x27;t even bother matching route</span></span><br><span class="line">      <span class="keyword">if</span> (!has_method &amp;&amp; method !== <span class="string">&#x27;HEAD&#x27;</span>) &#123;</span><br><span class="line">        match = <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// no match</span></span><br><span class="line">    <span class="keyword">if</span> (match !== <span class="literal">true</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> done(layerError);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// store route for dispatch on change</span></span><br><span class="line">    <span class="keyword">if</span> (route) &#123;</span><br><span class="line">      req.route = route;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Capture one-time layer values</span></span><br><span class="line">    req.params = self.mergeParams</span><br><span class="line">      ? mergeParams(layer.params, parentParams)</span><br><span class="line">      : layer.params;</span><br><span class="line">    <span class="keyword">var</span> layerPath = layer.path;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// this should be done for the layer</span></span><br><span class="line">    self.process_params(layer, paramcalled, req, res, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="keyword">return</span> next(layerError || err);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (route) &#123;</span><br><span class="line">        <span class="keyword">return</span> layer.handle_request(req, res, next);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      trim_prefix(layer, layerError, layerPath, path);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>找到之后又调用了 layer 的<code>handle_request()</code>函数，这个函数又在处理什么呢？接着往下看。其实他做的事情本质上是调用核心<code>fn(req, res, next);</code><br>fn是什么?<br>fn就是从 layer中取出的 <code>handle</code></p>
-<h3 id="5-next为什么会自动执行下一个中间件❓"><a href="#5-next为什么会自动执行下一个中间件❓" class="headerlink" title="5. next为什么会自动执行下一个中间件❓"></a>5. next为什么会自动执行下一个中间件❓</h3><p>理解了第4个问题流程，当我们自己注册了中间件，调用了 next() 框架底层就会来到next()匹配下一个stack进行layer的执行</p>
+        
+  <a href="/io/io/tags#NodeJs" >
+    <span class="tag-code">NodeJs</span>
+  </a>
 
       
-    </div>
+      <div class="article-summary">
+        
+          邂逅CLI开发-woker开发过程在前端开发过程中，我们会使用各种各样的脚手架 vue-cli、create-react-app等工具。
+这些工具是怎么开发出来的？当我们输入一个命令其内部帮我们处理了哪些事情？
+最近写了一个叫 woker 的小工具，记录下其开发过程。文档会分成两部分
 
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/io/tags/NodeJs/">NodeJs</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
+CL ...
+        
+      </div>
+      <a class="more" href="/io/2021/05/24/%E9%82%82%E9%80%85%20woker/">Read more</a>
+    </article>
   
-    
-    <h3 class="article-title"><a href="/io/2021/04/09/husky/"><span>husky</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/io/2021/04/09/husky/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-04-09T09:38:59.000Z">
-          2021-04-09
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/io/2021/05/21/nodejs-express/">express</a>
+      </h2>
+      <p class="article-date">May 21, 2021</p>
       
-        <p>名字没想好，就暂且叫它   <a target="_blank" rel="noopener" href="https://github.com/coderx-waper/husky.git">husky</a></p>
-<h3 id="写-husky-动机"><a href="#写-husky-动机" class="headerlink" title="写 husky 动机"></a>写 husky 动机</h3><p>自<code> Masonry</code> 的横空出世，其链式编程的姿势屡试不爽，相比于iOS的书写姿势更见其🐂， <code>Masonry</code> 中能实现这种链式编程方式那么iOS控件创建也一定能实现这种方式，在看完其内部实现后，在闲余时间决定自己将 UIKit 重写一遍达到其一样的效果，希望在开发过程中对开发效率和代码的可读性有一定的帮助。</p>
-<h3 id="husky-引入"><a href="#husky-引入" class="headerlink" title="husky 引入"></a>husky 引入</h3><blockquote>
-<h5 id="支持通过-pod-husky"><a href="#支持通过-pod-husky" class="headerlink" title="支持通过 pod husky"></a>支持通过<code> pod husky</code></h5></blockquote>
-<blockquote>
-<h5 id="可直接下载引入"><a href="#可直接下载引入" class="headerlink" title="可直接下载引入"></a>可直接下载引入</h5></blockquote>
-<blockquote>
-<h6 id="导入头文件-import-lt-husky-husky-h-gt"><a href="#导入头文件-import-lt-husky-husky-h-gt" class="headerlink" title="导入头文件  #import &lt;husky/husky.h&gt;"></a>导入头文件  <code>#import &lt;husky/husky.h&gt;</code></h6></blockquote>
-<h3 id="用法示例"><a href="#用法示例" class="headerlink" title="用法示例"></a>用法示例</h3><h6 id="控件创建🌰"><a href="#控件创建🌰" class="headerlink" title="控件创建🌰"></a>控件创建🌰</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[UILabel generator:^(huskyer * _Nonnull huskyer) &#123;</span><br><span class="line">        maker.frame(CGRectMake(100, 100, 100, 30)).text(@&quot;哈哈&quot;).textAlignment(NSTextAlignmentCenter).textColor([UIColor whiteColor]).view(self.view).backGroudColor([UIColor redColor]).radian(CGSizeMake(25, 25)).husker(^&#123;</span><br><span class="line">            NSLog(@&quot;click&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure>
-
-<h6 id="网络数据请求🌰"><a href="#网络数据请求🌰" class="headerlink" title="网络数据请求🌰"></a>网络数据请求🌰</h6><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span> patch:^(Patcher * _Nonnull patcher) &#123;</span><br><span class="line">        patcher.role(<span class="built_in">UIPatcherRoleGet</span>).url(<span class="string">@&quot;https://zhqd.shiminjia.com/weather.php&quot;</span>).indicator(<span class="literal">YES</span>);</span><br><span class="line">        [patcher send:^(<span class="keyword">id</span>  _Nonnull respone) &#123;</span><br><span class="line">            <span class="built_in">NSLog</span>(<span class="string">@&quot;respone---%@&quot;</span>,respone);</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure>
-
-<h3 id="版本设计基线"><a href="#版本设计基线" class="headerlink" title="版本设计基线"></a>版本设计基线</h3><p>husky 中几乎涵盖了日常开发过程中用到的对象，后期还会增加一些拓展。</p>
-<h3 id="期待更好想法"><a href="#期待更好想法" class="headerlink" title="期待更好想法"></a>期待更好想法</h3><p>如果您有更多好的设计和想法，可以加入我们~</p>
+        
+  <a href="/io/io/tags#NodeJs" >
+    <span class="tag-code">NodeJs</span>
+  </a>
 
       
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/io/tags/iOS/">iOS</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-  <article>
-
+      <div class="article-summary">
+        
+          express本节一起来探究node中常用的express核心中的5个问题
+1. 调用 express() 到底创建了什么❓打开express core的 lib/express.js 会发现有这么一段代码
+12345678910111213141516171819202122exports ...
+        
+      </div>
+      <a class="more" href="/io/2021/05/21/nodejs-express/">Read more</a>
+    </article>
   
-    
-    <h3 class="article-title"><a href="/io/2021/03/31/OC对象的本质/"><span>OC对象的本质</span></a></h3>
-    
-  
-
-  <div class="article-top-meta">
-    <span class="posted-on">
-      <a href="/io/2021/03/31/OC对象的本质/" rel="bookmark">
-        <time class="entry-date published" datetime="2021-03-31T06:26:53.000Z">
-          2021-03-31
-        </time>
-      </a>
-    </span>
-  </div>
-
-
-  
-
-  <div class="article-content">
-    <div class="entry">
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/io/2021/04/09/husky/">husky</a>
+      </h2>
+      <p class="article-date">April 9, 2021</p>
       
-        <h1 id="OC-对象的本质"><a href="#OC-对象的本质" class="headerlink" title="OC 对象的本质"></a>OC 对象的本质</h1><p>最近时间充足，打算再次对 Object-C 进行分析，而 Object-C本身绝对是优雅和美丽的，所以从这里开始，我们和Object-C来一场美丽的邂逅!</p>
-<h2 id="一、认识Object-C对象"><a href="#一、认识Object-C对象" class="headerlink" title="一、认识Object-C对象"></a>一、认识Object-C对象</h2><blockquote>
-<h4 id="Object-C本质"><a href="#Object-C本质" class="headerlink" title="Object-C本质"></a>Object-C本质</h4><blockquote>
-<ul>
-<li>我们平常编写的Object-C代码，底层其实都是C/C++代码，编译器再编译成汇编，最终形成机器语言</li>
-<li>对象、类 主要是基于C/C++结构体实现</li>
-</ul>
-</blockquote>
-</blockquote>
-<p>那么一个Object-C对象在底层中如何布局的？通过分析不难发现其底层实现如下图</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NSObject_IMPL</span>&#123;</span></span><br><span class="line"> Class isa</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<h3 id="内存初窥"><a href="#内存初窥" class="headerlink" title="内存初窥"></a>内存初窥</h3><blockquote>
-<ul>
-<li>一个Object-C对象会被分配不少于 16 bytes 的空间</li>
-<li>对象的指针地址为第一个成员的地址</li>
-<li>遵守内存对其原则</li>
-</ul>
-</blockquote>
-</blockquote>
-<p>可能你对最小分配16字节大小的结论有疑问，可以点击  <a target="_blank" rel="noopener" href="https://opensource.apple.com/tarballs/objc4/">objc4/</a> 下载源码查看内部实现 。在 objc-class-old 文件的 _class_createInstanceFromZone(Class cls, size_t extraBytes, void *zone)  方法中实现了下面规定</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">_class_createInstanceFromZone(Class cls, <span class="keyword">size_t</span> extraBytes, <span class="keyword">void</span> *zone)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">void</span> *bytes;</span><br><span class="line">    <span class="keyword">size_t</span> size;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Can&#x27;t create something for nothing</span></span><br><span class="line">    <span class="keyword">if</span> (!cls) <span class="keyword">return</span> nil;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Allocate and initialize</span></span><br><span class="line">    size = cls-&gt;alignedInstanceSize() + extraBytes;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    此处为官方硬性规定</span></span><br><span class="line"><span class="comment">    */</span> </span><br><span class="line">    <span class="comment">// CF requires all objects be at least 16 bytes.</span></span><br><span class="line">    <span class="keyword">if</span> (size &lt; <span class="number">16</span>) size = <span class="number">16</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (zone) &#123;</span><br><span class="line">        bytes = malloc_zone_calloc((<span class="keyword">malloc_zone_t</span> *)zone, <span class="number">1</span>, size);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        bytes = <span class="built_in">calloc</span>(<span class="number">1</span>, size);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> objc_constructInstance(cls, bytes);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>内存对齐又是怎么一回事? 看看官方说明一解疑惑</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Class&#x27;s ivar size rounded up to a pointer-size boundary.</span></span><br><span class="line"><span class="comment">// alignedInstanceSize 返回对齐大小</span></span><br><span class="line"><span class="comment">// unalignedInstanceSize 未对齐之前大小</span></span><br><span class="line"><span class="function"><span class="keyword">uint32_t</span> <span class="title">alignedInstanceSize</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; </span><br><span class="line">  <span class="keyword">return</span> word_align(unalignedInstanceSize());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="二、Object-C对象创建原理"><a href="#二、Object-C对象创建原理" class="headerlink" title="二、Object-C对象创建原理"></a>二、Object-C对象创建原理</h2><p>官方给出了两种创建对象的方式，方式一：通过 <code> [[object alloc]init]</code> ,方式二：通过 <code> [object new]</code> 下面我们用两种方式来新建一个 <code>Person</code> 对象一探究竟。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Person * person = [[Person alloc] init];</span><br></pre></td></tr></table></figure>
-
-<p>简单的一次调用，其背后原理为何？</p>
-<p>我将调用 <code> alloc</code> 整个源码流程贴出方便大家比对</p>
-<h5 id="2-1-源码处理流程"><a href="#2-1-源码处理流程" class="headerlink" title="2.1 源码处理流程"></a>2.1 源码处理流程</h5><ol>
-<li>先调用  objc_alloc ，此处会去调用 <code>callAlloc </code>函数，注意后两个参数</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Calls [cls alloc].</span></span><br><span class="line">id</span><br><span class="line">objc_alloc(Class cls)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> callAlloc(cls, <span class="literal">true</span><span class="comment">/*checkNil*/</span>, <span class="literal">false</span><span class="comment">/*allocWithZone*/</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>那么跳转到 <code>callAlloc</code> 函数 系统又处理了什么逻辑呢？</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Call [cls alloc] or [cls allocWithZone:nil], with appropriate </span></span><br><span class="line"><span class="comment">// shortcutting optimizations. // 算法优化</span></span><br><span class="line">callAlloc(Class cls, <span class="keyword">bool</span> checkNil, <span class="keyword">bool</span> allocWithZone=<span class="literal">false</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> __OBJC2__  <span class="comment">//在 objc2中 系统会处理这些函数</span></span></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  笔记</span></span><br><span class="line"><span class="comment">  callAlloc(Class cls, bool checkNil, bool allocWithZone=false)</span></span><br><span class="line"><span class="comment">  第一次 checkNil=true </span></span><br><span class="line"><span class="comment">  allocWithZone=false，其默认就是 false</span></span><br><span class="line"><span class="comment">  </span></span><br><span class="line"><span class="comment">  #define fastpath(x) (__builtin_expect(bool(x), 1))： x值越大表示为真的结果可能性更大</span></span><br><span class="line"><span class="comment">  #define slowpath(x) (__builtin_expect(bool(x), 0))   x值越小表示为假的结果可能性更大</span></span><br><span class="line"><span class="comment">  __builtin_expect：是 GCC提供的给我们的，目前在于允许我们将最有可能执行的分支告诉编译器。以达到对代码进行优化，减少指令跳转带来的性能下降。</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  </span><br><span class="line">    <span class="keyword">if</span> (slowpath(checkNil &amp;&amp; !cls)) <span class="keyword">return</span> nil;</span><br><span class="line">    <span class="keyword">if</span> (fastpath(!cls-&gt;ISA()-&gt;hasCustomAWZ())) &#123;</span><br><span class="line">      <span class="comment">// 如果条件成立 调用  _objc_rootAllocWithZone </span></span><br><span class="line">        <span class="keyword">return</span> _objc_rootAllocWithZone(cls, nil);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// No shortcuts available. //如没有最优捷径</span></span><br><span class="line">    <span class="keyword">if</span> (allocWithZone) &#123; <span class="comment">//如实现了allocWithZone 方法 实现消息转达 allocWithZone 方法</span></span><br><span class="line">        <span class="keyword">return</span> ((id(*)(id, SEL, struct _NSZone *))objc_msgSend)(cls, @selector(allocWithZone:), nil);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 未实现  allocWithZone ，直接调用 alloc 方法</span></span><br><span class="line">    <span class="keyword">return</span> ((id(*)(id, SEL))objc_msgSend)(cls, @selector(alloc));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><p>在第二步中存在两种调用关系，一种是存在最优化捷径 则直接调用  <code> rootAllocWithZone</code> 方法；一种则是在非<code> objc2</code> 下 实现 <code>allocWithZone </code>或者 <code>alloc  </code> 函数。</p>
-<p>在源码中官方直接去调用 <code> _class_createInstanceFromZone</code> 函数申请存储空间有兴趣的同仁可以跟踪下源码看看官方怎么进行存储空间开辟的，这里你会对前面<code>内存初窥</code>中写道的结论有个深刻的认识。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">_objc_rootAllocWithZone(Class cls, malloc_zone_t *zone __unused)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// allocWithZone under __OBJC2__ ignores the zone parameter</span></span><br><span class="line">    <span class="keyword">return</span> _class_createInstanceFromZone(cls, <span class="number">0</span>, nil,</span><br><span class="line">                                         OBJECT_CONSTRUCT_CALL_BADALLOC);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>对于<code>alloc</code>方法 系统实现起来就显得不那么复杂了</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">+ (id)alloc &#123;</span><br><span class="line">    <span class="keyword">return</span> _objc_rootAlloc(self);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ol>
-<blockquote>
-</blockquote>
-<h5 id="2-2-init-原理"><a href="#2-2-init-原理" class="headerlink" title="2.2 init 原理"></a>2.2 init 原理</h5><p>分析完了 <code>alloc</code> 的流程，我们接着分析 <code>init</code> 的流程。相比于 <code>alloc</code> 来说， <code>init</code> 内部实现十分简单，先来到的是 <code>_objc_rootInit</code> ，然后就直接返回 <code>obj</code> 了。其实这里是一种抽象工厂设计模式的体现，对于 <code>NSObject</code> 自带的 <code>init</code> 方法来说，其实啥也没干，但是如果你继承于 <code>NSObject</code> 的话，然后就可以去重写 `initWithxyz 之类的初始化方法来做一些初始化操作。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Replaced by CF (throws an NSException)</span></span><br><span class="line">+ (id)<span class="keyword">init</span> &#123;</span><br><span class="line">  <span class="comment">// 工厂设计模式</span></span><br><span class="line">    <span class="keyword">return</span> (id)self;</span><br><span class="line">&#125;</span><br><span class="line">- (id)<span class="keyword">init</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> _objc_rootInit(self);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h2><p>开发过程中探究源码会让我们对一项事务有不一样的认识，建议同仁多阅读源码。                                      </p>
+        
+  <a href="/io/io/tags#iOS" >
+    <span class="tag-code">iOS</span>
+  </a>
 
       
-    </div>
-
-  </div>
-
-  <div class="article-footer">
-    <div class="article-meta pull-left">
-
-    
-
-    
-    
-
-    <span class="post-tags">
-      <i class="icon-tags"></i>
-        <a href="/io/tags/iOS/">iOS</a>
-    </span>
-    
-
-    </div>
-
-    
-  </div>
-</article>
-
-
-
-
-<nav class="pagination">
+      <div class="article-summary">
+        
+          名字没想好，就暂且叫它   husky
+写 husky 动机自 Masonry 的横空出世，其链式编程的姿势屡试不爽，相比于iOS的书写姿势更见其🐂， Masonry 中能实现这种链式编程方式那么iOS控件创建也一定能实现这种方式，在看完其内部实现后，在闲余时间决定自己将 UIKit 重写 ...
+        
+      </div>
+      <a class="more" href="/io/2021/04/09/husky/">Read more</a>
+    </article>
   
-  
-</nav>
-    </main>
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/io/2021/03/31/OC%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B4%A8/">OC对象的本质</a>
+      </h2>
+      <p class="article-date">March 31, 2021</p>
+      
+        
+  <a href="/io/io/tags#iOS" >
+    <span class="tag-code">iOS</span>
+  </a>
 
-    <footer class="site-footer">
-  <p class="site-info">
-    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
-    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
-    </br>
-    
-    &copy; 2021 coderz
-    
+      
+      <div class="article-summary">
+        
+          OC 对象的本质最近时间充足，打算再次对 Object-C 进行分析，而 Object-C本身绝对是优雅和美丽的，所以从这里开始，我们和Object-C来一场美丽的邂逅!
+一、认识Object-C对象
+Object-C本质
+
+我们平常编写的Object-C代码，底层其实都是C/C++代码，编 ...
+        
+      </div>
+      <a class="more" href="/io/2021/03/31/OC%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9C%AC%E8%B4%A8/">Read more</a>
+    </article>
+  
+
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
   </p>
 </footer>
-    
-    
-  </div>
-</div>
-</body>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      hljs.configure({useBR: true});
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/io/js/script.js"></script>
+
+
+  </body>
 </html>
