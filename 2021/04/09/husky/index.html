@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ofiios | coderz - 记录每一刻 | coderz</title>
+  <title>husky | coderz - 记录每一刻 | coderz</title>
 
   
   <meta name="author" content="coderz">
@@ -22,7 +22,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <meta property="og:title" content="ofiios"/>
+  <meta property="og:title" content="husky"/>
 
   <meta property="og:site_name" content="coderz - 记录每一刻"/>
 
@@ -59,13 +59,13 @@
 
   
     
-    <h3 class="article-title"><span>ofiios</span></h3>
+    <h3 class="article-title"><span>husky</span></h3>
     
   
 
   <div class="article-top-meta">
     <span class="posted-on">
-      <a href="/io/2021/04/09/ofiios/" rel="bookmark">
+      <a href="/io/2021/04/09/husky/" rel="bookmark">
         <time class="entry-date published" datetime="2021-04-09T09:38:59.000Z">
           2021-04-09
         </time>
@@ -79,19 +79,19 @@
   <div class="article-content">
     <div class="entry">
       
-        <p>名字没想好，就暂且叫它   <a target="_blank" rel="noopener" href="https://github.com/coderx-waper/ofiios.git">ofiios</a></p>
-<h3 id="写-ofiios-动机"><a href="#写-ofiios-动机" class="headerlink" title="写 ofiios 动机"></a>写 ofiios 动机</h3><p>自<code> Masonry</code> 的横空出世，其链式编程的姿势屡试不爽，相比于iOS的书写姿势更见其🐂， <code>Masonry</code> 中能实现这种链式编程方式那么iOS控件创建也一定能实现这种方式，在看完其内部实现后，在闲余时间决定自己将 UIKit 重写一遍达到其一样的效果，希望在开发过程中对开发效率和代码的可读性有一定的帮助。</p>
-<h3 id="ofiios-引入"><a href="#ofiios-引入" class="headerlink" title="ofiios 引入"></a>ofiios 引入</h3><blockquote>
-<h5 id="支持通过-pod-ofiios"><a href="#支持通过-pod-ofiios" class="headerlink" title="支持通过 pod ofiios"></a>支持通过<code> pod ofiios</code></h5></blockquote>
+        <p>名字没想好，就暂且叫它   <a target="_blank" rel="noopener" href="https://github.com/coderx-waper/husky.git">husky</a></p>
+<h3 id="写-husky-动机"><a href="#写-husky-动机" class="headerlink" title="写 husky 动机"></a>写 husky 动机</h3><p>自<code> Masonry</code> 的横空出世，其链式编程的姿势屡试不爽，相比于iOS的书写姿势更见其🐂， <code>Masonry</code> 中能实现这种链式编程方式那么iOS控件创建也一定能实现这种方式，在看完其内部实现后，在闲余时间决定自己将 UIKit 重写一遍达到其一样的效果，希望在开发过程中对开发效率和代码的可读性有一定的帮助。</p>
+<h3 id="husky-引入"><a href="#husky-引入" class="headerlink" title="husky 引入"></a>husky 引入</h3><blockquote>
+<h5 id="支持通过-pod-husky"><a href="#支持通过-pod-husky" class="headerlink" title="支持通过 pod husky"></a>支持通过<code> pod husky</code></h5></blockquote>
 <blockquote>
 <h5 id="可直接下载引入"><a href="#可直接下载引入" class="headerlink" title="可直接下载引入"></a>可直接下载引入</h5></blockquote>
 <blockquote>
-<h6 id="import-lt-ofiios-ofiios-h-gt"><a href="#import-lt-ofiios-ofiios-h-gt" class="headerlink" title="#import &lt;ofiios/ofiios.h&gt;"></a>#import &lt;ofiios/ofiios.h&gt;</h6></blockquote>
-<h3 id="用法示例"><a href="#用法示例" class="headerlink" title="用法示例"></a>用法示例</h3><h6 id="控件创建🌰"><a href="#控件创建🌰" class="headerlink" title="控件创建🌰"></a>控件创建🌰</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[UILabel generator:^(Maker * _Nonnull maker) &#123;</span><br><span class="line">        maker.frame(CGRectMake(100, 100, 100, 30)).text(@&quot;你好啊！王小二&quot;).textAlignment(NSTextAlignmentCenter).textColor([UIColor whiteColor]).view(self.view).backGroudColor([UIColor redColor]).radian(CGSizeMake(25, 25)).click(^&#123;</span><br><span class="line">            NSLog(@&quot;click&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure>
+<h6 id="导入头文件-import-lt-husky-husky-h-gt"><a href="#导入头文件-import-lt-husky-husky-h-gt" class="headerlink" title="导入头文件  #import &lt;husky/husky.h&gt;"></a>导入头文件  <code>#import &lt;husky/husky.h&gt;</code></h6></blockquote>
+<h3 id="用法示例"><a href="#用法示例" class="headerlink" title="用法示例"></a>用法示例</h3><h6 id="控件创建🌰"><a href="#控件创建🌰" class="headerlink" title="控件创建🌰"></a>控件创建🌰</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[UILabel generator:^(huskyer * _Nonnull huskyer) &#123;</span><br><span class="line">        maker.frame(CGRectMake(100, 100, 100, 30)).text(@&quot;哈哈&quot;).textAlignment(NSTextAlignmentCenter).textColor([UIColor whiteColor]).view(self.view).backGroudColor([UIColor redColor]).radian(CGSizeMake(25, 25)).husker(^&#123;</span><br><span class="line">            NSLog(@&quot;click&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure>
 
 <h6 id="网络数据请求🌰"><a href="#网络数据请求🌰" class="headerlink" title="网络数据请求🌰"></a>网络数据请求🌰</h6><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[<span class="keyword">self</span> patch:^(Patcher * _Nonnull patcher) &#123;</span><br><span class="line">        patcher.role(<span class="built_in">UIPatcherRoleGet</span>).url(<span class="string">@&quot;https://zhqd.shiminjia.com/weather.php&quot;</span>).indicator(<span class="literal">YES</span>);</span><br><span class="line">        [patcher send:^(<span class="keyword">id</span>  _Nonnull respone) &#123;</span><br><span class="line">            <span class="built_in">NSLog</span>(<span class="string">@&quot;respone---%@&quot;</span>,respone);</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125;];</span><br></pre></td></tr></table></figure>
 
-<h3 id="版本设计基线"><a href="#版本设计基线" class="headerlink" title="版本设计基线"></a>版本设计基线</h3><p>ofiios中几乎涵盖了日常开发过程中用到的对象，后期还会增加一些拓展，也期盼您有更好的想法为其拓展。</p>
+<h3 id="版本设计基线"><a href="#版本设计基线" class="headerlink" title="版本设计基线"></a>版本设计基线</h3><p>husky 中几乎涵盖了日常开发过程中用到的对象，后期还会增加一些拓展。</p>
 <h3 id="期待更好想法"><a href="#期待更好想法" class="headerlink" title="期待更好想法"></a>期待更好想法</h3><p>如果您有更多好的设计和想法，可以加入我们~</p>
 
       
